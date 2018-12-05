@@ -2,8 +2,8 @@ sudo: false
 
 script:
   - cd ..
+  - pwd
   - ./binder/install-conda.sh
   - ./binder/install-latex.sh
   - source binder/env.sh
   - conda list
-
