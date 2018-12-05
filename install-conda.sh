@@ -6,7 +6,7 @@
 # where malariagen/binder is a submodule.
 
 # ensure script errors if any command fails
-set -xe
+set -e
 
 # conda setup
 CONDADIR=conda
@@ -46,8 +46,6 @@ if [ ! -f miniconda.installed ]; then
     fi
 
     # set conda channels
-    conda config --add channels defaults
-    conda config --add channels bioconda
     conda config --add channels conda-forge
     conda update --yes conda
 
@@ -62,8 +60,7 @@ else
 fi
 
 echo "[install] installing packages"
-source activate $CONDANAME
 # install packages
-conda install --yes --file ../binder/environment.yml
+conda env update --name $CONDANAME --file ../binder/environment.yml
 # clean conda caches
 conda clean --yes --all

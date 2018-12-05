@@ -38,7 +38,7 @@ if [ ! -f texlive.installed ]; then
     # run installation
     ./install-tl-*/install-tl \
         -repository=$TEXREPO \
-        -profile=../binder/install/texlive.profile \
+        -profile=../binder/texlive.profile \
         -no-persistent-downloads \
         -no-verify-downloads
 
@@ -52,6 +52,6 @@ fi
 echo "[install] installing additional texlive packages"
 tlmgr option repository $TEXREPO
 tlmgr_install="tlmgr install --no-persistent-downloads --no-verify-downloads --no-require-verification"
-for package in $(cat ../binder/install/texlive.packages); do
+for package in $(cat ../binder/texlive.packages); do
     $tlmgr_install $package
 done
