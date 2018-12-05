@@ -1,6 +1,6 @@
 # MalariaGEN binder
 
-This repository with installation scripts and environment definitions
+This repository contains installation scripts and environment definitions
 for conda and texlive, for standardising environments across the
 MalariaGEN resource centre team.
 
@@ -66,4 +66,11 @@ into master manually, e.g.:
 git checkout master
 git merge update-binder
 git push origin master
+```
+
+Once merged, don't forget to update your conda environment, e.g.:
+
+```
+cd /path/to/local/clone/of/vector-ops
+./binder/install-conda.sh
 ```
