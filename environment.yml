@@ -1,0 +1,76 @@
+name: malariagen
+channels:
+  - conda-forge
+  - bioconda
+  - defaults
+dependencies:
+  - python=3.6
+  - bcftools=1.7
+  - bcolz=1.1.2
+  - biopython=1.71
+  - cartopy=0.16.0
+  - cython=0.28.1
+  - cytoolz=0.9.0.1
+  - dask=0.17.2
+  - fastcluster=1.1.24
+  - graphviz=2.38.0
+  - h5py=2.7.1
+  - htslib=1.7
+  - humanize=0.5.1
+  - intervaltree=2.1.0
+  - ipykernel=4.8.2
+  - ipython=6.3.1
+  - ipywidgets=7.2.0
+  - joblib=0.11
+  - jupyter_console=5.2.0
+  - lmfit=0.9.7
+  - matplotlib=2.2.2
+  - matplotlib-venn=0.11.5
+  - msprime=0.5.0
+  - nbconvert=5.3.1
+  - nose=1.3.7
+  - notebook=5.4.1
+  - numcodecs=0.5.5
+  - numexpr=2.6.4
+  - numpy=1.13.3
+  - pandas=0.22.0
+  - peakutils=1.1.1
+  - pillow=5.1.0
+  - psutil=5.4.3
+  - pyfasta=0.5.2
+  - pysam=0.11.2.2
+  - pysamstats=1.0.1
+  - pytables=3.4.2
+  - pyvcf=0.6.8
+  - qtconsole=4.3.1
+  - samtools=1.7
+  - scikit-allel=1.1.10
+  - scikit-learn=0.19.1
+  - scipy=1.0.1
+  - seaborn=0.8.1
+  - snakemake=4.8.0
+  - toolz=0.9.0
+  - xlrd=1.1.0
+  - zarr=2.2.0
+  - mysqlclient=1.3.10
+  - pip:
+    # not on conda-forge
+    - anhima==0.11.2
+    # not on conda-forge
+    - prettypandas==0.0.4
+    # not on conda-forge
+    - xlwt-future==0.8.0
+    # not on conda-forge
+    - hmmlearn==0.2.0
+    # version not on conda-forge
+    - graphviz==0.8.2
+    # not build for Python 3.6 on conda-forge
+    - petl==1.1.1
+    - petlx==1.0.3
+    - openpyxl==2.3.2
+    # not on conda-forge
+    - scikits.bootstrap==0.3.3
+    # others
+    - sphinx==1.6.5
+    - sphinx-autobuild==0.7.1
+    - sphinx-bootstrap-theme==0.6.0

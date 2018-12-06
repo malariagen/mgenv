@@ -1,0 +1,9 @@
+sudo: false
+
+script:
+  - cd ..
+  - pwd
+  - ./binder/install-conda.sh
+  - ./binder/install-texlive.sh
+  - source binder/env.sh
+  - conda list
