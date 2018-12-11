@@ -40,7 +40,7 @@ git commit -m 'add pymysql package #10'
 git push
 ```
 
-- Come back here to https://github.com/malariagen/binder and you should now see an option to create a pull request for your new branch. Click this.
+- Come back here to https://github.com/malariagen/binder and you should now see a "Compare & pull request" button for your new branch. Click this.
 - Assuming this issue would be resolved by the pull request, include the text "resolves #10" in the PR description (replacing "10" with whatever is the issue number being resolved). This will mean that when the PR is merged, the corresponding issue will automatically get closed.
 
 ## Usage
