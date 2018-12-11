@@ -67,7 +67,7 @@ git commit -m 'add binder submodule'
 
 ### Run install script for a local clone
 
-- If you don't already have a local clone of the repo, create one.  Nnote you need to use ```--recursive``` in order to pull in binder code. Example code for vector-ops repo:
+- If you don't already have a local clone of the repo, create one.  Note you need to use ```--recursive``` in order to pull in binder code. Example code for vector-ops repo:
 
 ```
 git clone --recursive git@github.com:malariagen/vector-ops.git
