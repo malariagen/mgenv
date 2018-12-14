@@ -55,13 +55,14 @@ repo. This typically involves three distinct steps:
 The following sub-sections give commands for each of the above.
 
 ### Add binder as a submodule
-It is recommended that you first create an issue for doing this within your repo with a title such as "Add binder". Then create a new branch, add binder submodule, and create a pull request. For example, to use this within the malariagen/vector-ops repo, assuming your new issue is number 10,
+It is recommended that you first create an issue for doing this within your repo with a title such as "Add binder". Then create a new branch, add binder submodule, and create a pull request. It is also recommend that you add 'deps' to the .gitignore file for the repo, so that once the install command has ben run (see next section), the deps directory this is installed into will not come under git tracking. For example, to use this within the malariagen/vector-ops repo, assuming your new issue is number 10,
 
 ```
 cd /path/to/local/clone/of/vector-ops
 git checkout -b 10_add_binder
 git push -u origin 10_add_binder
 git submodule add git@github.com:malariagen/binder.git
+echo "deps" >> .gitignore
 git add --all
 git commit -m 'add binder submodule'
 ```
