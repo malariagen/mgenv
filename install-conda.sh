@@ -33,7 +33,7 @@ if [ ! -f miniconda.installed ]; then
         wget --no-clobber https://repo.continuum.io/miniconda/Miniconda3-latest-MacOSX-x86_64.sh
 
         # install miniconda
-        bash Miniconda3-latest-MaxOSX-x86_64.sh -b -p $CONDADIR
+        bash Miniconda3-latest-MacOSX-x86_64.sh -b -p $CONDADIR
 
     elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
         # Install for GNU/Linux platform
