@@ -55,14 +55,21 @@ repo. This typically involves three distinct steps:
 The following sub-sections give commands for each of the above.
 
 ### Add binder as a submodule
-For example, to use this within the malariagen/vector-ops repo,
-do:
+It is recommended that you first create an issue for doing this within your repo with a title such as "Add binder". Then create a new branch, add binder submodule, and create a pull request. For example, to use this within the malariagen/vector-ops repo, assuming your new issue is number 10,
 
 ```
 cd /path/to/local/clone/of/vector-ops
+git checkout -b 10_add_binder
+git push -u origin 10_add_binder
 git submodule add git@github.com:malariagen/binder.git
 git add --all
 git commit -m 'add binder submodule'
+```
+
+At this point create a pull request for your new branch, and then pull the changes into master, deleting the new branch. To clean up, it is a good idea to also delete the branch from your local clone, using a command such as:
+
+```
+git branch -d 10_add_binder
 ```
 
 ### Run install script for a local clone
@@ -86,10 +93,16 @@ cd /path/to/local/clone/of/vector-ops
 source binder/env.sh
 ```
 
-- Once activated, you can run a jupyter notebook with:
+- Once activated, you can run a jupyter notebook on a local mahcine with:
 
 ```
 jupyter notebook
+```
+
+- or if you want to run a jupyter notebook on a server that you will connect to from your local machine, you could run a command such as:
+
+```
+jupyter notebook --no-browser --ip=0.0.0.0 --port <port number>
 ```
 
 ### Updating the binder submodule
