@@ -65,6 +65,7 @@ git submodule add git@github.com:malariagen/binder.git
 echo "deps" >> .gitignore
 git add --all
 git commit -m 'add binder submodule'
+git push
 ```
 
 At this point create a pull request for your new branch, and then pull the changes into master, deleting the new branch. To clean up, it is a good idea to also delete the branch from your local clone, using a command such as:
