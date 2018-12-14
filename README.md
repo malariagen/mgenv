@@ -74,6 +74,14 @@ At this point create a pull request for your new branch, and then pull the chang
 git branch -d 10_add_binder
 ```
 
+A useful command for checking what branches in local clone are no longer in github is:
+
+```
+git remote prune origin --dry-run
+```
+
+By running the above command without ```--dry-run``` you can remove all 
+
 ### Run install script for a local clone
 
 - If you don't already have a local clone of the repo, create one.  Note you need to use ```--recursive``` in order to pull in binder code. Example code for vector-ops repo:
