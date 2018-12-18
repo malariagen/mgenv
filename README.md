@@ -32,7 +32,20 @@ git checkout -b 10-add-pymysql-package
 git push -u origin 10-add-pymysql-package
 ```
 
-- Make relevant changes (e.g. to environment.yml) and then add, commit and push the changes, e.g.:
+- Make relevant changes (e.g. to environment.yml)
+- Test the changes made, e.g. for conda environment updates:
+
+```
+# deactivate environments (if any):
+source deactivate
+cd ..
+./binder/install_conda.sh
+source ./binder/env.sh
+# check versions and resolve conflicts
+cd binder
+```
+
+- Add, commit and push the changes, e.g.:
 
 ```
 git add environment.yml
