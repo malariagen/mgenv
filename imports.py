@@ -35,8 +35,7 @@ import pysam
 import pysamstats
 import anhima
 import prettypandas
-# problem with xlwt currently, skip for now
-#import xlwt
+import xlwt
 import hmmlearn
 import petl
 import petlx
