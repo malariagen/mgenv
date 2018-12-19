@@ -7,3 +7,4 @@ script:
   - ./binder/install-texlive.sh
   - source binder/env.sh
   - conda list
+  - python imports.py
