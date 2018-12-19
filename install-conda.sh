@@ -13,7 +13,7 @@ CONDADIR=conda
 CONDANAME=${PWD##*/}
 
 # descend into dependencies directory
-DEPSDIR=deps
+DEPSDIR=binder/deps
 mkdir -pv $DEPSDIR
 cd $DEPSDIR
 
@@ -61,6 +61,6 @@ fi
 
 echo "[install] installing packages"
 # install packages
-conda env update --name $CONDANAME --file ../binder/environment.yml
+conda env update --name $CONDANAME --file ../environment.yml
 # clean conda caches
 conda clean --yes --all
