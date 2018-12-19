@@ -14,6 +14,7 @@ import lmfit
 import matplotlib
 import matplotlib_venn
 import msprime
+import MySQLdb
 import numcodecs
 import numexpr
 import numpy
@@ -34,6 +35,7 @@ import pysam
 import pysamstats
 import anhima
 import prettypandas
+# problem with xlwt currently, skip for now
 #import xlwt
 import hmmlearn
 import petl
