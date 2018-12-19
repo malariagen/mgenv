@@ -54,7 +54,7 @@ dependencies:
   - pip:
     # build for now to be sure
     - pysam==0.15.1
-    - pysamstats==1.1.0
+    - pysamstats==1.1.2
     # not on conda-forge
     - anhima==0.11.2
     # not on conda-forge
