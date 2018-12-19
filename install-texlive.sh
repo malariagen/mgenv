@@ -9,7 +9,7 @@
 set -xe
 
 # descend into dependencies directory
-DEPSDIR=deps
+DEPSDIR=binder/deps
 mkdir -pv $DEPSDIR
 cd $DEPSDIR
 
@@ -38,7 +38,7 @@ if [ ! -f texlive.installed ]; then
     # run installation
     ./install-tl-*/install-tl \
         -repository=$TEXREPO \
-        -profile=../binder/texlive.profile \
+        -profile=../texlive.profile \
         -no-persistent-downloads \
         -no-verify-downloads
 
@@ -52,6 +52,6 @@ fi
 echo "[install] installing additional texlive packages"
 tlmgr option repository $TEXREPO
 tlmgr_install="tlmgr install --no-persistent-downloads --no-verify-downloads --no-require-verification"
-for package in $(cat ../binder/texlive.packages); do
+for package in $(cat ../texlive.packages); do
     $tlmgr_install $package
 done
