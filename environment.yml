@@ -4,6 +4,7 @@ channels:
   - bioconda
   - defaults
 dependencies:
+  - nomkl
   - python=3.6
   - bcftools=1.7
   - bcolz=1.1.2
