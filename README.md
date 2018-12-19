@@ -40,7 +40,14 @@ git commit -m 'add pymysql package #10'
 git push
 ```
 
-- Come back here to https://github.com/malariagen/binder and you should now see a "Compare & pull request" button for your new branch. Click this.
+- To test the new environment installs without any errors, you can run locally, e.g.:
+
+```
+cd ..
+./binder/install-conda.sh
+```
+
+- If the local tests look OK and you are ready to propose the changes, come back here to https://github.com/malariagen/binder and you should now see a "Compare & pull request" button for your new branch. Click this.
 - Assuming this issue would be resolved by the pull request, include the text "resolves #10" in the PR description (replacing "10" with whatever is the issue number being resolved). This will mean that when the PR is merged, the corresponding issue will automatically get closed.
 - After PR was created, Travis CI check will automatically run to check that the modified environment can be installed. If any problems arise, these can be traced by clicking 'Details' button next to continuous-integration/travis-ci/pr panel.
 
