@@ -70,7 +70,6 @@ cd /path/to/local/clone/of/vector-ops
 git checkout -b 10_add_binder
 git push -u origin 10_add_binder
 git submodule add git@github.com:malariagen/binder.git
-echo "deps" >> .gitignore
 git add --all
 git commit -m 'add binder submodule'
 git push
