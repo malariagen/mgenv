@@ -35,7 +35,8 @@ dependencies:
   - intervaltree=2.1.0
   - ipykernel=5.1.0
   - ipython=7.2.0
-  - ipyleaflet=0.9.2
+  # disable for now, not compatible with xarray 0.11.0
+  # - ipyleaflet=0.9.2
   - ipywidgets=7.4.2
   - joblib=0.13.0
   - jupyter=1.0.0
