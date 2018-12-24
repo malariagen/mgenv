@@ -1,3 +1,7 @@
+os:
+  - linux
+  - osx
+
 sudo: false
 
 script:
@@ -8,3 +12,4 @@ script:
   - source binder/env.sh
   - conda list
   - python binder/imports.py
+  - pdflatex --version

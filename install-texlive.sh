@@ -14,7 +14,11 @@ mkdir -pv $DEPSDIR
 cd $DEPSDIR
 
 # put dependencies on the path
-export PATH=./texlive/bin/x86_64-linux:$PATH
+if [ "$(uname)" == "Darwin" ]; then
+    export PATH=./texlive/bin/x86_64-darwin:$PATH
+elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
+    export PATH=./texlive/bin/x86_64-linux:$PATH
+fi
 
 # use a snapshot mirror to get reproducible install
 #TEXREPO=https://ctanmirror.speedata.de/2017-09-01/systems/texlive/tlnet

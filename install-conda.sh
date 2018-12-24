@@ -60,6 +60,13 @@ else
 fi
 
 echo "[install] installing packages"
+# ensure channel order - cannot rely on environment.yml
+# https://github.com/conda/conda/issues/7238
+conda config --add channels pyviz/label/dev
+conda config --add channels bokeh/label/dev
+conda config --add channels intake
+conda config --add channels bioconda
+conda config --add channels conda-forge
 # install packages
 conda env update --name $CONDANAME --file ../environment.yml
 # clean conda caches
