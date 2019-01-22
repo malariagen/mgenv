@@ -70,6 +70,8 @@ dependencies:
   - psutil=5.4.8
   - pyfasta=0.5.2
   - pyfaidx=0.5.5.2
+  - pysam=0.15.2
+  - pysamstats=1.1.2
   - pytables=3.4.4
   - python-blosc=1.6.2
   - pyvcf=0.6.8
@@ -90,9 +92,6 @@ dependencies:
   - xlwt=1.3.0
   - zict=0.1.3
   - pip:
-    # version discrepancy for pysam on bioconda, install from pypi to be sure
-    - pysam==0.15.2
-    - pysamstats==1.1.2
     # not on conda-forge
     - anhima==0.11.2
     # not on conda-forge
