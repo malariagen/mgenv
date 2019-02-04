@@ -42,7 +42,7 @@ dependencies:
   - jupyter_client=5.2.4
   # N.B. jupyterhub versions need to match hub image
   # https://repo2docker.readthedocs.io/en/latest/howto/jupyterhub_images.html
-  - jupyterhub==0.9.4
+  - jupyterhub=0.9.4
   - jupyterlab=0.35.4
   - jupyterlab_launcher=0.13.1
   - lmfit=0.9.12
