@@ -45,6 +45,7 @@ dependencies:
   - jupyterhub=0.9.4
   - jupyterlab=0.35.4
   - jupyterlab_launcher=0.13.1
+  - jupytext=1.1.1
   - lmfit=0.9.12
   - matplotlib=3.0.2
   - matplotlib-venn=0.11.5
