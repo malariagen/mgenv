@@ -30,7 +30,7 @@ if [ ! -f miniconda.installed ]; then
     if [ "$(uname)" == "Darwin" ]; then
         # Install for Mac OS X platform        
         # download miniconda
-        wget --no-clobber https://repo.continuum.io/miniconda/Miniconda3-latest-MacOSX-x86_64.sh
+        curl --continue-at - --remote-name https://repo.continuum.io/miniconda/Miniconda3-latest-MacOSX-x86_64.sh
 
         # install miniconda
         bash Miniconda3-latest-MacOSX-x86_64.sh -b -p $CONDADIR
