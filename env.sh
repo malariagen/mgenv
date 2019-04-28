@@ -18,11 +18,14 @@ CONDANAME=${REPODIR##*/}
 # add miniconda to the path
 export PATH=${INSTALLDIR}/conda/bin:$PATH
 
-# add texlive to the path
+# add texlive to the path - N.B., texlive is always installed in default location,
+# because there is no way to create separate environments for separate repos within
+# the same installation
+TEXLIVEDIR=${REPODIR}/binder/deps/texlive
 if [ "$(uname)" == "Darwin" ]; then
-    export PATH=${INSTALLDIR}/texlive/bin/x86_64-darwin:$PATH
+    export PATH=${TEXLIVEDIR}/bin/x86_64-darwin:$PATH
 elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
-    export PATH=${INSTALLDIR}/texlive/bin/x86_64-linux:$PATH
+    export PATH=${TEXLIVEDIR}/bin/x86_64-linux:$PATH
 fi
 
 # activate conda environment
