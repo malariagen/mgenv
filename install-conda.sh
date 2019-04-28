@@ -8,9 +8,6 @@
 # ensure script errors if any command fails
 set -e
 
-# conda setup
-CONDADIR=conda
-
 # conda environment name - use name of current directory
 CONDANAME=${PWD##*/}
 
@@ -33,14 +30,14 @@ mkdir -pv $INSTALLDIR
 cd $INSTALLDIR
 
 # put conda on the path
-export PATH=${INSTALLDIR}/${CONDADIR}/bin:$PATH
+export PATH=${INSTALLDIR}/conda/bin:$PATH
 
 # install miniconda
 if [ ! -f miniconda.installed ]; then
     echo "[install] installing miniconda"
 
     # clean up any previous
-    rm -rf $CONDADIR
+    rm -rf conda
 
     if [ "$(uname)" == "Darwin" ]; then
         # Install for Mac OS X platform
@@ -48,7 +45,7 @@ if [ ! -f miniconda.installed ]; then
         curl --continue-at - --remote-name https://repo.continuum.io/miniconda/Miniconda3-latest-MacOSX-x86_64.sh
 
         # install miniconda
-        bash Miniconda3-latest-MacOSX-x86_64.sh -b -p $CONDADIR
+        bash Miniconda3-latest-MacOSX-x86_64.sh -b -p conda
 
     elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
         # Install for GNU/Linux platform
@@ -56,7 +53,7 @@ if [ ! -f miniconda.installed ]; then
         wget --no-clobber https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh
 
         # install miniconda
-        bash Miniconda3-latest-Linux-x86_64.sh -b -p $CONDADIR
+        bash Miniconda3-latest-Linux-x86_64.sh -b -p conda
 
     fi
 
