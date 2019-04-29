@@ -8,22 +8,14 @@
 # ensure script errors if any command fails
 set -xe
 
-# descend into dependencies directory
-DEPSDIR=binder/deps
-mkdir -pv $DEPSDIR
-cd $DEPSDIR
+# setup environment variables
+source setup.sh
 
-# put dependencies on the path
-if [ "$(uname)" == "Darwin" ]; then
-    export PATH=./texlive/bin/x86_64-darwin:$PATH
-elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
-    export PATH=./texlive/bin/x86_64-linux:$PATH
-fi
+# ensure installation directory exists
+mkdir -pv $TEXDIR
 
-# use a snapshot mirror to get reproducible install
-#TEXREPO=https://ctanmirror.speedata.de/2017-09-01/systems/texlive/tlnet
-#TEXREPO=ftp://ftp.tug.org/historic/systems/texlive/2017/tlnet-final
-TEXREPO=http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2017/tlnet-final
+# change into into installation directory
+cd $TEXDIR
 
 # install texlive
 if [ ! -f texlive.installed ]; then
@@ -53,9 +45,12 @@ else
     echo "[install] skipping texlive installation"
 fi
 
+# return to original location
+cd $REPODIR
+
 echo "[install] installing additional texlive packages"
 tlmgr option repository $TEXREPO
 tlmgr_install="tlmgr install --no-persistent-downloads --no-verify-downloads --no-require-verification"
-for package in $(cat ../texlive.packages); do
+for package in $(cat binder/texlive.packages); do
     $tlmgr_install $package
 done

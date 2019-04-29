@@ -6,31 +6,16 @@
 # where malariagen/binder is a submodule.
 
 # ensure script errors if any command fails
-set -e
+set -xe
 
-# conda environment name - use name of current directory
-CONDANAME=${PWD##*/}
-
-# remember directory where this script was run from
-REPODIR=${PWD}
-
-# determine directory in which conda will be installed
-if [[ -z "${MALARIAGEN_BINDER_INSTALLDIR}" ]]; then
-    # if not specified by user, default installation location
-    INSTALLDIR=${REPODIR}/binder/deps
-else
-    # allow user to specify installation location
-    INSTALLDIR=${MALARIAGEN_BINDER_INSTALLDIR}
-fi
+# setup environment variables
+source setup.sh
 
 # ensure installation directory exists
 mkdir -pv $INSTALLDIR
 
 # change into into installation directory
 cd $INSTALLDIR
-
-# put conda on the path
-export PATH=${INSTALLDIR}/conda/bin:$PATH
 
 # install miniconda
 if [ ! -f miniconda.installed ]; then
