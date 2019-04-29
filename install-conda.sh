@@ -8,32 +8,32 @@
 # ensure script errors if any command fails
 set -e
 
-# conda setup
-CONDADIR=conda
-CONDANAME=${PWD##*/}
+# determine containing directory
+BINDERDIR="$( cd "$(dirname "${BASH_SOURCE[0]}")" && pwd -P )"
 
-# descend into dependencies directory
-DEPSDIR=binder/deps
-mkdir -pv $DEPSDIR
-cd $DEPSDIR
+# setup environment variables
+source ${BINDERDIR}/variables.sh
 
-# put dependencies on the path
-export PATH=./${CONDADIR}/bin:$PATH
+# ensure installation directory exists
+mkdir -pv $INSTALLDIR
+
+# change into into installation directory
+cd $INSTALLDIR
 
 # install miniconda
 if [ ! -f miniconda.installed ]; then
-    echo "[install] installing miniconda"
+    echo "[binder] installing miniconda to $INSTALLDIR"
 
     # clean up any previous
-    rm -rf $CONDADIR
+    rm -rf conda
 
     if [ "$(uname)" == "Darwin" ]; then
-        # Install for Mac OS X platform        
+        # Install for Mac OS X platform
         # download miniconda
         curl --continue-at - --remote-name https://repo.continuum.io/miniconda/Miniconda3-latest-MacOSX-x86_64.sh
 
         # install miniconda
-        bash Miniconda3-latest-MacOSX-x86_64.sh -b -p $CONDADIR
+        bash Miniconda3-latest-MacOSX-x86_64.sh -b -p conda
 
     elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
         # Install for GNU/Linux platform
@@ -41,7 +41,7 @@ if [ ! -f miniconda.installed ]; then
         wget --no-clobber https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh
 
         # install miniconda
-        bash Miniconda3-latest-Linux-x86_64.sh -b -p $CONDADIR
+        bash Miniconda3-latest-Linux-x86_64.sh -b -p conda
 
     fi
 
@@ -56,10 +56,14 @@ if [ ! -f miniconda.installed ]; then
     touch miniconda.installed
 
 else
-    echo "[install] skipping miniconda installation"
+    echo "[binder] skipping miniconda installation"
 fi
 
-echo "[install] installing packages"
+# return to original location
+cd $REPODIR
+
+echo "[binder] installing packages"
+
 # ensure channel order - cannot rely on environment.yml
 # https://github.com/conda/conda/issues/7238
 conda config --add channels pyviz/label/dev
@@ -67,7 +71,14 @@ conda config --add channels bokeh/label/dev
 conda config --add channels intake
 conda config --add channels bioconda
 conda config --add channels conda-forge
+
+# ensure conda is up to date
+conda update --yes conda
+
 # install packages
-conda env update --name $CONDANAME --file ../environment.yml
-# clean conda caches
-conda clean --yes --all
+conda env update --name $CONDANAME --file ${BINDERDIR}/environment.yml --prune
+
+if [[ -z "${MALARIAGEN_BINDER_HOME}" ]]; then
+    # clean conda caches
+    conda clean --yes --all
+fi
