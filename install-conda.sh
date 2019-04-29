@@ -76,7 +76,7 @@ conda config --add channels conda-forge
 conda update --yes conda
 
 # install packages
-conda env update --name $CONDANAME --file ./binder/environment.yml
+conda env update --name $CONDANAME --file ${BINDERDIR}/environment.yml
 
 # clean conda caches
 conda clean --yes --all
