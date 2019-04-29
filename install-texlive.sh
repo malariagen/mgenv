@@ -6,7 +6,7 @@
 # where the malariagen/binder repo is a submodule.
 
 # ensure script errors if any command fails
-set -ex
+set -e
 
 # determine containing directory
 BINDERDIR="$( cd "$(dirname "${BASH_SOURCE[0]}")" && pwd -P )"
