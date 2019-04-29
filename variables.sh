@@ -4,12 +4,12 @@
 REPODIR="$( cd "$(dirname "${BASH_SOURCE[0]}")" && cd .. && pwd -P )"
 
 # determine directory in which conda is installed
-if [[ -z "${MALARIAGEN_BINDER_INSTALLDIR}" ]]; then
+if [[ -z "${MALARIAGEN_BINDER_HOME}" ]]; then
     # if not specified by user, default installation location
     INSTALLDIR=${REPODIR}/binder/deps
 else
     # allow user to specify installation location
-    INSTALLDIR=${MALARIAGEN_BINDER_INSTALLDIR}
+    INSTALLDIR=${MALARIAGEN_BINDER_HOME}
 fi
 
 # determine name of parent repository, use as conda environment name

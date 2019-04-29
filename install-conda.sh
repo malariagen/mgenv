@@ -6,10 +6,10 @@
 # where malariagen/binder is a submodule.
 
 # ensure script errors if any command fails
-set -e
+set -ex
 
 # determine containing directory
-BINDERDIR=$(dirname "$0")
+BINDERDIR="$( cd "$(dirname "${BASH_SOURCE[0]}")" && pwd -P )"
 
 # setup environment variables
 source ${BINDERDIR}/variables.sh
@@ -22,7 +22,7 @@ cd $INSTALLDIR
 
 # install miniconda
 if [ ! -f miniconda.installed ]; then
-    echo "[install] installing miniconda to $INSTALLDIR"
+    echo "[binder] installing miniconda to $INSTALLDIR"
 
     # clean up any previous
     rm -rf conda
@@ -56,13 +56,13 @@ if [ ! -f miniconda.installed ]; then
     touch miniconda.installed
 
 else
-    echo "[install] skipping miniconda installation"
+    echo "[binder] skipping miniconda installation"
 fi
 
 # return to original location
 cd $REPODIR
 
-echo "[install] installing packages"
+echo "[binder] installing packages"
 
 # ensure channel order - cannot rely on environment.yml
 # https://github.com/conda/conda/issues/7238

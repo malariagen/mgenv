@@ -6,10 +6,10 @@
 # where the malariagen/binder repo is a submodule.
 
 # ensure script errors if any command fails
-set -e
+set -ex
 
 # determine containing directory
-BINDERDIR=$(dirname "$0")
+BINDERDIR="$( cd "$(dirname "${BASH_SOURCE[0]}")" && pwd -P )"
 
 # setup environment variables
 source ${BINDERDIR}/variables.sh
@@ -22,7 +22,7 @@ cd $TEXDIR
 
 # install texlive
 if [ ! -f texlive.installed ]; then
-    echo "[install] installing texlive to ${TEXDIR}"
+    echo "[binder] installing texlive to ${TEXDIR}"
 
     # clean up any previous
     rm -rvf texlive*
@@ -45,13 +45,13 @@ if [ ! -f texlive.installed ]; then
     touch texlive.installed
 
 else
-    echo "[install] skipping texlive installation"
+    echo "[binder] skipping texlive installation"
 fi
 
 # return to original location
 cd $REPODIR
 
-echo "[install] installing additional texlive packages"
+echo "[binder] installing additional texlive packages"
 tlmgr option repository $TEXREPO
 tlmgr_install="tlmgr install --no-persistent-downloads --no-verify-downloads --no-require-verification"
 for package in $(cat ${BINDERDIR}/texlive.packages); do
