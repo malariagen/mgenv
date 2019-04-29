@@ -7,4 +7,4 @@ BINDERDIR=$(dirname "${BASH_SOURCE[0]}")
 source ${BINDERDIR}/variables.sh
 
 # activate conda environment
-source activate $CONDANAME
+command -v conda > /dev/null && source activate $CONDANAME || echo "conda not installed"
