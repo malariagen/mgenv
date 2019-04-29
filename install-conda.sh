@@ -6,10 +6,13 @@
 # where malariagen/binder is a submodule.
 
 # ensure script errors if any command fails
-set -xe
+set -e
+
+# determine containing directory
+BINDERDIR=$(dirname "$0")
 
 # setup environment variables
-source setup.sh
+source ${BINDERDIR}/variables.sh
 
 # ensure installation directory exists
 mkdir -pv $INSTALLDIR
@@ -19,7 +22,7 @@ cd $INSTALLDIR
 
 # install miniconda
 if [ ! -f miniconda.installed ]; then
-    echo "[install] installing miniconda"
+    echo "[install] installing miniconda to $INSTALLDIR"
 
     # clean up any previous
     rm -rf conda
