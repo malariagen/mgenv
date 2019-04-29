@@ -78,5 +78,7 @@ conda update --yes conda
 # install packages
 conda env update --name $CONDANAME --file ${BINDERDIR}/environment.yml --prune
 
-# clean conda caches
-conda clean --yes --all
+if [[ -z "${MALARIAGEN_BINDER_HOME}" ]]; then
+    # clean conda caches
+    conda clean --yes --all
+fi
