@@ -45,7 +45,7 @@ if [ ! -f texlive.installed ]; then
     touch texlive.installed
 
 else
-    echo "[binder] skipping texlive installation"
+    echo "[binder] skipping texlive installation, assuming previously installed"
 fi
 
 # return to original location
@@ -55,5 +55,10 @@ echo "[binder] installing additional texlive packages"
 tlmgr option repository $TEXREPO
 tlmgr_install="tlmgr install --no-persistent-downloads --no-verify-downloads --no-require-verification"
 for package in $(cat ${BINDERDIR}/texlive.packages); do
-    $tlmgr_install $package
+    marker=${TEXDIR}/texlive.${package}.installed
+    if [ ! -f $marker ]; then
+        $tlmgr_install $package && touch $marker
+    else
+        echo "[binder] skipping $package, assuming previously installed"
+    fi
 done
