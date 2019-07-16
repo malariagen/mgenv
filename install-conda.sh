@@ -91,9 +91,9 @@ else
     conda env remove -v --name=$CONDANAME
     conda env create -v --name=$CONDANAME --file ${BINDERDIR}/environment.yml
     conda env export -v --name=$CONDANAME > $ENVPINNED
-    echo "******************* $ENVPINNED ********************************"
+    echo "*** $ENVPINNED ***"
     cat $ENVPINNED
-    echo "***************************************************************"
+    echo "*** $ENVPINNED ***"
 fi
 
 #if [[ -z "${MALARIAGEN_BINDER_HOME}" ]]; then
