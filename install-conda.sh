@@ -45,13 +45,9 @@ if [ ! -f miniconda.installed ]; then
 
     fi
 
-    # set conda channels
-    conda config --add channels conda-forge
+    # update conda
     conda config --set channel_priority strict
-    conda update --yes conda
-
-    # create default scientific Python environment
-    conda create --yes --name=$CONDANAME python=3.6
+    conda update --yes -c conda-forge conda
 
     # mark success
     touch miniconda.installed
@@ -65,17 +61,24 @@ cd $REPODIR
 
 echo "[binder] installing packages"
 
-# ensure channel order - cannot rely on environment.yml
-# https://github.com/conda/conda/issues/7238
+echo "[binder] ensure channel order"
+# N.B., cannot rely on environment.yml https://github.com/conda/conda/issues/7238
+conda config --add channels pyviz/label/dev
+conda config --add channels bokeh/label/dev
+conda config --add channels intake
 conda config --add channels bioconda
 conda config --add channels conda-forge
 conda config --set channel_priority strict
 
-# ensure conda is up to date
-conda update --yes conda
+echo "[binder] ensure conda is up to date"
+#conda update -c conda-forge --yes conda
+#conda --version
 
-# install packages
-conda env update --name $CONDANAME --file ${BINDERDIR}/environment.yml --prune
+echo "[binder] remove environment if already exists, start from scratch"
+conda env remove -v --name=$CONDANAME
+
+echo "[binder] create environment"
+conda env create -v --name $CONDANAME --file ${BINDERDIR}/environment.yml
 
 if [[ -z "${MALARIAGEN_BINDER_HOME}" ]]; then
     # clean conda caches
