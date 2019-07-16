@@ -80,7 +80,7 @@ fi
 if [ -f "$ENVPINNED" ]; then
     # Here we build the environment from the pinned definition file,
     # this is what we expect users to do.
-    echo "[binder] creating environment $CONDANAME from pinned definition file"
+    echo "[binder] creating environment $CONDANAME from $ENVPINNED"
     conda env remove -v --name=$CONDANAME
     conda env create -v --name $CONDANAME --file $ENVPINNED
 else
