@@ -2,11 +2,6 @@ os:
   - linux
   - osx
 
-addons:
-  artifacts:
-    paths:
-      - $(ls export/* | tr "\n" ":")
-
 sudo: false
 
 script:
