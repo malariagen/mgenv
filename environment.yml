@@ -6,9 +6,9 @@ dependencies:
   # - nomkl
   - blas=*=openblas
   - python=3.6
-  # - bcftools
+  - bcftools
   - bcolz
-  # - biopython
+  - biopython
   - bokeh
   - bqplot
   - cartopy
@@ -25,19 +25,19 @@ dependencies:
   - gcsfs
   - graphviz
   - h5py
-  # - hmmlearn
-  # - holoviews
-  # - htslib
+  - hmmlearn
+  - holoviews
+  - htslib
   - humanize
-  # - intake
-  # - intake-xarray
+  - intake
+  - intake-xarray
   - intervaltree
   - ipykernel
   - ipython
-  # - ipyleaflet
+  - ipyleaflet
   - ipywidgets
-  #- jedi
-  #- joblib
+  - jedi
+  - joblib
   - jupyter
   - jupyter_console
   - jupyter_client
@@ -47,7 +47,7 @@ dependencies:
   - jupyterlab
   - jupyterlab_launcher
   - jupytext
-  # - lmfit
+  - lmfit
   - matplotlib
   - matplotlib-venn
   - msgpack-python
@@ -61,40 +61,40 @@ dependencies:
   - notebook
   - numba
   - numcodecs
-  # - numexpr
+  - numexpr
   - numpy
-  - openpyxl
-  - pandas
+  # - openpyxl
+  # - pandas
   # - peakutils
-  - petl
-  - pillow
-  - psutil
+  # - petl
+  # - pillow
+  # - psutil
   # - pyfasta
   # - pyfaidx
   # - pysam
   # - pysamstats
   # - pytables
-  - python-graphviz
+  # - python-graphviz
   #- python-kubernetes
-  - pyvcf
-  - pyzmq
-  - qtconsole
-  - s3fs
+  # - pyvcf
+  # - pyzmq
+  # - qtconsole
+  # - s3fs
   # - samtools
-  - scikit-allel
-  - scikit-image
-  - scikit-learn
-  - scipy
+  # - scikit-allel
+  # - scikit-image
+  # - scikit-learn
+  # - scipy
   # - seaborn
   # - snakemake
-  - toolz
-  - tornado
+  # - toolz
+  # - tornado
   # - xarray
-  - xlrd
-  - xlwt
-  - zarr
-  - zict
-  - pip
+  # - xlrd
+  # - xlwt
+  # - zarr
+  # - zict
+  # - pip
 #  - pip:
 #    # not on conda-forge
 #    - cached_property
