@@ -72,9 +72,9 @@ conda update -c conda-forge --yes conda
 conda --version
 
 if [ "$(uname)" == "Darwin" ]; then
-    ENVPINNED=${BINDERDIR}/environment-pinned-osx.yml
+    ENVPINNED=${BINDERDIR}/environment-${BINDERV}-osx.yml
 else
-    ENVPINNED=${BINDERDIR}/environment-pinned-linux.yml
+    ENVPINNED=${BINDERDIR}/environment-${BINDERV}-linux.yml
 fi
 
 if [ -f "$ENVPINNED" ]; then
