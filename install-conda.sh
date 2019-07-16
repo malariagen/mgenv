@@ -75,7 +75,7 @@ conda --version
 if [ -f "${BINDERDIR}/environment-pinned.yml" ]; then
     # Here we build the environment from the pinned definition file,
     # this is what we expect users to do.
-    echo "[binder] creating environment from pinned definition file"
+    echo "[binder] creating environment $CONDANAME from pinned definition file"
     conda env remove -v --name=$CONDANAME
     conda env create -v --name $CONDANAME --file ${BINDERDIR}/environment-pinned.yml
 else

@@ -3,6 +3,9 @@
 # determine path to parent repository
 REPODIR="$( cd "$(dirname "${BASH_SOURCE[0]}")" && cd .. && pwd -P )"
 
+# determine binder version
+BINDERV=$( cd ${REPODIR}/binder && git rev-parse --short HEAD )
+
 # determine directory in which conda is installed
 if [[ -z "${MALARIAGEN_BINDER_HOME}" ]]; then
     # if not specified by user, default installation location
@@ -13,7 +16,7 @@ else
 fi
 
 # determine name of parent repository, use as conda environment name
-CONDANAME=${REPODIR##*/}
+CONDANAME=${REPODIR##*/}-$BINDERV
 
 # add miniconda to the path
 export PATH=${INSTALLDIR}/conda/bin:$PATH
