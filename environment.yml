@@ -3,10 +3,9 @@ name: malariagen
 # the ordering in environment.yml 
 # https://github.com/conda/conda/issues/7238
 dependencies:
-  # - nomkl
+  # conda-forge
   - blas=*=openblas
   - python=3.6
-  - bcftools
   - bcolz
   - biopython
   - bokeh
@@ -27,7 +26,6 @@ dependencies:
   - h5py
   - hmmlearn
   - holoviews
-  - htslib
   - humanize
   - intake
   - intake-xarray
@@ -63,38 +61,43 @@ dependencies:
   - numcodecs
   - numexpr
   - numpy
-  # - openpyxl
-  # - pandas
+  - openpyxl
+  - pandas
+  # problem:
   # - peakutils
+  # problem:
   # - petl
-  # - pillow
-  # - psutil
+  - pillow
+  - psutil
+  - pytables
+  - python-graphviz
+  - python-kubernetes
+  - pyvcf
+  - pyzmq
+  - qtconsole
+  - s3fs
+  - scikit-allel
+  - scikit-image
+  - scikit-learn
+  - scipy
+  - seaborn
+  - toolz
+  - tornado
+  - xarray
+  - xlrd
+  - xlwt
+  - zarr
+  - zict
+  - pip
+  # bioconda
+  # - bcftools
+  # - htslib
   # - pyfasta
   # - pyfaidx
   # - pysam
   # - pysamstats
-  # - pytables
-  # - python-graphviz
-  #- python-kubernetes
-  # - pyvcf
-  # - pyzmq
-  # - qtconsole
-  # - s3fs
   # - samtools
-  # - scikit-allel
-  # - scikit-image
-  # - scikit-learn
-  # - scipy
-  # - seaborn
   # - snakemake
-  # - toolz
-  # - tornado
-  # - xarray
-  # - xlrd
-  # - xlwt
-  # - zarr
-  # - zict
-  # - pip
 #  - pip:
 #    # not on conda-forge
 #    - cached_property
