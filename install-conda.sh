@@ -86,7 +86,7 @@ else
     CONDANAME=__malariagen_binder_rebuild__
     conda env remove -v --name=$CONDANAME
     conda env create -v --name=$CONDANAME --file ${BINDERDIR}/environment.yml
-    conda env export --name=$CONDANAME > ${BINDERDIR}/environment-pinned.yml
+    conda env export -v --no-builds --name=$CONDANAME > ${BINDERDIR}/environment-pinned.yml
     conda env remove -v --name=$CONDANAME
 fi
 
