@@ -71,10 +71,11 @@ echo "[binder] ensure conda is up to date"
 conda update -c conda-forge --yes conda
 conda --version
 
+mkdir -pv ${BINDERDIR}/export
 if [ "$(uname)" == "Darwin" ]; then
-    ENVPINNED=${BINDERDIR}/environment-${BINDERV}-osx.yml
+    ENVPINNED=${BINDERDIR}/export/environment-${BINDERV}-osx.yml
 else
-    ENVPINNED=${BINDERDIR}/environment-${BINDERV}-linux.yml
+    ENVPINNED=${BINDERDIR}/export/environment-${BINDERV}-linux.yml
 fi
 
 if [ -f "$ENVPINNED" ]; then
