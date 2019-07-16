@@ -71,23 +71,32 @@ echo "[binder] ensure conda is up to date"
 conda update -c conda-forge --yes conda
 conda --version
 
-if [ -f "${BINDERDIR}/environment-pinned.yml" ]; then
+if [ "$(uname)" == "Darwin" ]; then
+    ENVPINNED=${BINDERDIR}/environment-pinned-osx.yml
+else
+    ENVPINNED=${BINDERDIR}/environment-pinned-linux.yml
+fi
+
+if [ -f "$ENVPINNED" ]; then
     # Here we build the environment from the pinned definition file,
     # this is what we expect users to do.
     echo "[binder] creating environment $CONDANAME from pinned definition file"
     conda env remove -v --name=$CONDANAME
-    conda env create -v --name $CONDANAME --file ${BINDERDIR}/environment-pinned.yml
+    conda env create -v --name $CONDANAME --file $ENVPINNED
 else
     # Here we build the environment from the unpinned file, which is
     # what a maintainer will do when they want to upgrade the pinned
     # definition file. N.B., create into a temporary environment so 
     # we don't get confused with main environment.
-    echo "[binder] recreating pinned environment definition file"
+    echo "[binder] recreating $ENVPINNED"
     CONDANAME=__malariagen_binder_rebuild__
     conda env remove -v --name=$CONDANAME
     conda env create -v --name=$CONDANAME --file ${BINDERDIR}/environment.yml
-    conda env export -v --no-builds --name=$CONDANAME > ${BINDERDIR}/environment-pinned.yml
+    conda env export -v --name=$CONDANAME > $ENVPINNED
     conda env remove -v --name=$CONDANAME
+    echo **********************************************************
+    cat $ENVPINNED
+    echo **********************************************************
 fi
 
 if [[ -z "${MALARIAGEN_BINDER_HOME}" ]]; then
