@@ -88,11 +88,12 @@ else
     # what a maintainer will do when they want to upgrade the pinned
     # definition files.
     echo "[binder] recreating $ENVPINNED"
-    CONDANAME=malariagen-binder-$(date --iso-8601)
     conda env remove -v --name=$CONDANAME
     conda env create -v --name=$CONDANAME --file ${BINDERDIR}/environment.yml
     conda env export -v --name=$CONDANAME > $ENVPINNED
+    echo "******************* $ENVPINNED ********************************"
     cat $ENVPINNED
+    echo "***************************************************************"
 fi
 
 #if [[ -z "${MALARIAGEN_BINDER_HOME}" ]]; then
