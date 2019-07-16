@@ -67,9 +67,6 @@ echo "[binder] installing packages"
 
 # ensure channel order - cannot rely on environment.yml
 # https://github.com/conda/conda/issues/7238
-conda config --add channels pyviz/label/dev
-conda config --add channels bokeh/label/dev
-conda config --add channels intake
 conda config --add channels bioconda
 conda config --add channels conda-forge
 conda config --set channel_priority strict
