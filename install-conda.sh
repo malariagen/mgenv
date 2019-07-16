@@ -47,6 +47,7 @@ if [ ! -f miniconda.installed ]; then
 
     # set conda channels
     conda config --add channels conda-forge
+    conda config --set channel_priority strict
     conda update --yes conda
 
     # create default scientific Python environment
@@ -71,6 +72,7 @@ conda config --add channels bokeh/label/dev
 conda config --add channels intake
 conda config --add channels bioconda
 conda config --add channels conda-forge
+conda config --set channel_priority strict
 
 # ensure conda is up to date
 conda update --yes conda
