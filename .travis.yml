@@ -11,7 +11,7 @@ script:
   - source binder/env.sh
   - conda list
   - python binder/imports.py
-  # - ./binder/install-texlive.sh
-  # - pdflatex --version
-  - cd binder
-  - ls -lh export
+  - ./binder/install-texlive.sh
+  - pdflatex --version
+
+
