@@ -13,8 +13,10 @@ script:
   - cd ..
   - pwd
   - ./binder/install-conda.sh
-  - ./binder/install-texlive.sh
   - source binder/env.sh
   - conda list
   - python binder/imports.py
-  - pdflatex --version
+  # - ./binder/install-texlive.sh
+  # - pdflatex --version
+  - cd binder
+  - ls -lh export
