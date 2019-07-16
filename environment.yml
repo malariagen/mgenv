@@ -5,7 +5,7 @@ name: malariagen
 dependencies:
   # conda-forge
   - blas=*=openblas
-  - python=3.6
+  - python=3.7
   - bcolz
   - biopython
   - bokeh
@@ -63,11 +63,12 @@ dependencies:
   - numpy
   - openpyxl
   - pandas
-  # problem:
+  # problem, causes inconsistency:
   # - peakutils
-  # problem:
+  # problem, causes inconsistency:
   # - petl
   - pillow
+  - pomegranate
   - psutil
   - pytables
   - python-graphviz
@@ -90,26 +91,24 @@ dependencies:
   - zict
   - pip
   # bioconda
-  # - bcftools
-  # - htslib
-  # - pyfasta
-  # - pyfaidx
-  # - pysam
-  # - pysamstats
-  # - samtools
-  # - snakemake
-#  - pip:
-#    # not on conda-forge
-#    - cached_property
-#    # not on conda-forge
-#    - anhima
-#    # not on conda-forge
-#    - prettypandas
-#    # not build for Python 3.6 on conda-forge
-#    - petlx
-#    # not on conda-forge
-#    - scikits.bootstrap
-#    # others
-#    - Sphinx
-#    - sphinx-autobuild
-#    - sphinx-bootstrap-theme
+  - bcftools
+  - htslib
+  - pyfasta
+  - pyfaidx
+  - pysam
+  - pysamstats
+  - samtools
+  - snakemake
+  - pip:
+    # not on conda-forge
+    - cached_property
+    - anhima
+    - prettypandas
+    - scikits.bootstrap
+    # problems on conda-forge
+    - petl
+    - petlx
+    # others
+    - Sphinx
+    - sphinx-autobuild
+    - sphinx-bootstrap-theme

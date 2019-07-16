@@ -64,24 +64,34 @@ echo "[binder] installing packages"
 echo "[binder] ensure channel order"
 # N.B., cannot rely on environment.yml https://github.com/conda/conda/issues/7238
 conda config --remove-key channels
-# conda config --add channels pyviz/label/dev
-# conda config --add channels bokeh/label/dev
-# conda config --add channels intake
-# conda config --add channels bioconda
+conda config --add channels bioconda
 conda config --add channels conda-forge
 conda config --set channel_priority strict
 
 echo "[binder] ensure conda is up to date"
-#conda update -c conda-forge --yes conda
-#conda --version
+conda update -c conda-forge --yes conda
+conda --version
 
-echo "[binder] remove environment if already exists, start from scratch"
-conda env remove -v --name=$CONDANAME
+if [ -f "${BINDERDIR}/environment-pinned.yml" ]; then
+    # Here we build the environment from the pinned definition file,
+    # this is what we expect users to do.
+    echo "[binder] creating environment from pinned definition file"
+    conda env remove -v --name=$CONDANAME
+    conda env create -v --name $CONDANAME --file ${BINDERDIR}/environment-pinned.yml
+else
+    # Here we build the environment from the unpinned file, which is
+    # what a maintainer will do when they want to upgrade the pinned
+    # definition file. N.B., create into a temporary environment so 
+    # we don't get confused with main environment.
+    echo "[binder] recreating pinned environment definition file"
+    CONDANAME=__malariagen_binder_rebuild__
+    conda env remove -v --name=$CONDANAME
+    conda env create -v --name=$CONDANAME --file ${BINDERDIR}/environment.yml
+    conda env export --name=$CONDANAME > ${BINDERDIR}/environment-pinned.yml
+    conda env remove -v --name=$CONDANAME
+fi
 
-echo "[binder] create environment"
-conda env create -v --name $CONDANAME --file ${BINDERDIR}/environment.yml
-
-#if [[ -z "${MALARIAGEN_BINDER_HOME}" ]]; then
-#    # clean conda caches
-#    conda clean --yes --all
-#fi
+if [[ -z "${MALARIAGEN_BINDER_HOME}" ]]; then
+    # clean conda caches
+    conda clean --yes --all
+fi
