@@ -5,7 +5,7 @@ name: malariagen
 dependencies:
   # conda-forge
   - blas=*=openblas
-  - python=3.7
+  - python=3.6
   - bcolz
   - biopython
   - bokeh
