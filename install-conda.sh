@@ -45,12 +45,9 @@ if [ ! -f miniconda.installed ]; then
 
     fi
 
-    # set conda channels
-    conda config --add channels conda-forge
-    conda update --yes conda
-
-    # create default scientific Python environment
-    conda create --yes --name=$CONDANAME python=3.6
+    # update conda
+    conda config --set channel_priority strict
+    conda update --yes -c conda-forge conda
 
     # mark success
     touch miniconda.installed
@@ -64,21 +61,42 @@ cd $REPODIR
 
 echo "[binder] installing packages"
 
-# ensure channel order - cannot rely on environment.yml
-# https://github.com/conda/conda/issues/7238
-conda config --add channels pyviz/label/dev
-conda config --add channels bokeh/label/dev
-conda config --add channels intake
+echo "[binder] ensure channel order"
+# N.B., cannot rely on environment.yml https://github.com/conda/conda/issues/7238
 conda config --add channels bioconda
 conda config --add channels conda-forge
+conda config --set channel_priority strict
 
-# ensure conda is up to date
-conda update --yes conda
+echo "[binder] ensure conda is up to date"
+conda update -c conda-forge --yes conda
+conda --version
 
-# install packages
-conda env update --name $CONDANAME --file ${BINDERDIR}/environment.yml --prune
-
-if [[ -z "${MALARIAGEN_BINDER_HOME}" ]]; then
-    # clean conda caches
-    conda clean --yes --all
+if [ "$(uname)" == "Darwin" ]; then
+    ENVPINNED=${BINDERDIR}/environment-pinned-osx.yml
+else
+    ENVPINNED=${BINDERDIR}/environment-pinned-linux.yml
 fi
+
+if [ -f "$ENVPINNED" ]; then
+    # Here we build the environment from the pinned definition file,
+    # this is what we expect users to do.
+    echo "[binder] creating environment $CONDANAME from $ENVPINNED"
+    conda env remove -v --name=$CONDANAME
+    conda env create -v --name $CONDANAME --file $ENVPINNED
+else
+    # Here we rebuild the environment from the unpinned file, which is
+    # what a maintainer will do when they want to upgrade the pinned
+    # definition files.
+    echo "[binder] recreating $ENVPINNED"
+    conda env remove -v --name=$CONDANAME
+    conda env create -v --name=$CONDANAME --file ${BINDERDIR}/environment.yml
+    conda env export -v --name=$CONDANAME > $ENVPINNED
+    echo "*** $ENVPINNED ***"
+    cat $ENVPINNED
+    echo "*** $ENVPINNED ***"
+fi
+
+#if [[ -z "${MALARIAGEN_BINDER_HOME}" ]]; then
+#    # clean conda caches
+#    conda clean --yes --all
+#fi

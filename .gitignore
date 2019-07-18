@@ -2,4 +2,6 @@
 *~
 # installation directory
 deps
+# environment export directory
+export
 

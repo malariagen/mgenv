@@ -7,13 +7,14 @@ MalariaGEN resource centre team.
 ## Proposing changes
 
 If you want to propose changes to this repository, e.g., add or update
-a package in environment.yml, please submit a pull request. The following
-commands show a typical workflow for doing this:
+a package in environment.yml, please submit a pull request. The
+following commands show a typical workflow for doing this:
 
-- If you don't already have a local clone of the binder repo, create one with:
+- If you don't already have a local clone of the binder repo, fork the
+  repo to your user account, then clone:
 
 ```
-git clone git@github.com:malariagen/binder.git
+git clone git@github.com:yourusername/binder.git
 ```
 
 - Update your local master branch:
@@ -25,45 +26,62 @@ git pull
 ```
 
 - Create a new issue at https://github.com/malariagen/binder/issues
-- Create a new branch for the work you want to do, naming the branch using the issue number and a descriptive slug, e.g.:
+  describing the changes you propose to make.
+
+- Create a new branch for the work you want to do, naming the branch
+  using the issue number and a descriptive slug, e.g.:
 
 ```
-git checkout -b 10-add-pymysql-package
-git push -u origin 10-add-pymysql-package
+git checkout -b 10-add-foo-package
+git push -u origin 10-add-foo-package
 ```
 
-- Make relevant changes (e.g. to environment.yml), add, commit and push the changes, e.g.:
+- Make changes to environment.yml in a text editor.
+
+- Delete the pinned environment files:
 
 ```
-git add environment.yml
-git commit -m 'add pymysql package #10'
+rm environment-pinned-*.yml
+```
+
+- Commit the changes:
+
+```
+git add environment.yml environment-pinned-linux.yml environment-pinned-osx.yml
+git commit -m 'add foo package, wipe pinned environments'
 git push
 ```
 
-- To test the new environment installs without any errors, you can run locally, e.g.:
+- Come back here to https://github.com/malariagen/binder and make a
+  pull request.
+
+- After the PR is created, Travis CI will automatically run to check
+  that the modified environment can be created, and will generate new
+  versions of the pinned environment files. If CI passes, go to the
+  logs and find the contents of the new `environment-pinned-linux.yml`
+  and `environment-pinned-osx.yml` files, and copy-paste them back
+  into local files, then commit and push to update the PR.
 
 ```
-cd ..
-./binder/install-conda.sh
+git add environment-pinned-linux.yml environment-pinned-osx.yml
+git commit -m 'add foo package, rebuild pinned environments'
+git push
 ```
-
-- If the local tests look OK and you are ready to propose the changes, come back here to https://github.com/malariagen/binder and you should now see a "Compare & pull request" button for your new branch. Click this.
-- Assuming this issue would be resolved by the pull request, include the text "resolves #10" in the PR description (replacing "10" with whatever is the issue number being resolved). This will mean that when the PR is merged, the corresponding issue will automatically get closed.
-- After PR was created, Travis CI check will automatically run to check that the modified environment can be installed. If any problems arise, these can be traced by clicking 'Details' button next to continuous-integration/travis-ci/pr panel.
 
 ## Usage
 
 This repo is intended to be used as a git submodule within another
 repo. This typically involves three distinct steps:
 
-1. Add binder as a submodule to your repo. This only needs to be done once per repo. Note that someone else might already have done this for your repo of interest (the repo will include a ```binder``` sub-directory if that is the case)
+1. Add binder as a submodule to your repo. This only needs to be done once per repo. Note that someone else might already have done this for your repo of interest (the repo will include a ```binder``` sub-directory if that is the case).
 1. Run the install script for each local clone of the repo. This needs to be done for each local clone you have, for example you might need to do this separately for one clone on your local machine and a second clone on a server.
 1. Update the binder submodule. This needs to be done every time you know there have been changes made to the binder repo, and you want to move the submodule forward within your working repo.
 
 The following sub-sections give commands for each of the above.
 
 ### Add binder as a submodule
-It is recommended that you first create an issue for doing this within your repo with a title such as "Add binder". Then create a new branch, add binder submodule, and create a pull request. It is also recommend that you add 'deps' to the .gitignore file for the repo, so that once the install command has been run (see next section), the deps directory this is installed into will not come under git tracking. For example, to use this within the malariagen/vector-ops repo, assuming your new issue is number 10,
+
+It is recommended that you first create an issue for doing this within your repo with a title such as "Add binder". Then create a new branch, add binder submodule, and create a pull request. It is also recommend that you add 'deps' to the .gitignore file for the repo, so that once the install command has been run (see next section), the deps directory this is installed into will not come under git tracking. For example, to use this within the malariagen/vector-ops repo, assuming your new issue is number 10:
 
 ```
 cd /path/to/local/clone/of/vector-ops

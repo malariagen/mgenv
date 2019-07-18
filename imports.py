@@ -19,7 +19,7 @@ import numcodecs
 import numexpr
 import numpy
 import pandas
-import peakutils
+# import peakutils
 import psutil
 import pyfasta
 import tables
