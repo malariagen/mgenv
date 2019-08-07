@@ -56,7 +56,8 @@ fi
 cd $REPODIR
 
 # set conda channel options
-CHANNEL_OPTS="--strict-channel-priority --override-channels --channel conda-forge --channel defaults"
+CHANNEL_OPTS="--override-channels --channel conda-forge --channel bioconda --channel defaults"
+SOLVER_OPTS="--strict-channel-priority"
 
 echo "[binder] installing packages"
 
@@ -70,24 +71,26 @@ else
     ENVPINNED=${BINDERDIR}/environment-pinned-linux.yml
 fi
 
-echo "[binder] remove channel $CONDANAME if it already exists"
-conda env remove -v --name=$CONDANAME
-
 if [ -f "$ENVPINNED" ]; then
     # Here we build the environment from the pinned definition file,
     # this is what we expect users to do.
     echo "[binder] creating environment $CONDANAME from $ENVPINNED"
-    conda create -v $CHANNEL_OPTS --name $CONDANAME --file $ENVPINNED
+    conda env create -v --force --name $CONDANAME --file $ENVPINNED
 
 else
     # Here we rebuild the environment from the unpinned file, which is
     # what a maintainer will do when they want to upgrade the pinned
     # definition files.
+    CONDANAME=malariagen
+    conda env remove -v --name=$CONDANAME
     echo "[binder] recreating $ENVPINNED"
-    conda create -v $CHANNEL_OPTS --name $CONDANAME --file ${BINDERDIR}/requirements-conda-forge.txt
-    conda install -v --channel bioconda $CHANNEL_OPTS --name $CONDANAME --file ${BINDERDIR}/requirements-bioconda.txt
+    echo "[binder] installing conda packages"
+    conda create --yes -v $SOLVER_OPTS $CHANNEL_OPTS --name $CONDANAME --file ${BINDERDIR}/requirements-conda-forge.txt --file ${BINDERDIR}/requirements-bioconda.txt
+    echo "[binder] installing packages from pypi"
+    source activate $CONDANAME
     pip install -v -r ${BINDERDIR}/requirements-pypi.txt
-    conda env export -v --name=$CONDANAME > $ENVPINNED
+    echo "[binder] exporting environment"
+    conda env export -v $CHANNEL_OPTS --name=$CONDANAME > $ENVPINNED
     echo "*** $ENVPINNED ***"
     cat $ENVPINNED
     echo "*** $ENVPINNED ***"
