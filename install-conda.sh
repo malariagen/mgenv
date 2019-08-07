@@ -62,7 +62,7 @@ SOLVER_OPTS="--strict-channel-priority"
 echo "[binder] installing packages"
 
 echo "[binder] ensure conda is up to date"
-conda update $CHANNEL_OPTS --yes conda
+conda update $SOLVER_OPTS $CHANNEL_OPTS --yes conda
 conda --version
 
 if [ "$(uname)" == "Darwin" ]; then
