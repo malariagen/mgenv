@@ -65,8 +65,7 @@ dependencies:
   - pandas
   # problem, causes inconsistency:
   # - peakutils
-  # problem, causes inconsistency:
-  # - petl
+  - petl>=1.3
   - pillow
   - pomegranate
   - psutil
@@ -106,7 +105,6 @@ dependencies:
     - prettypandas
     - scikits.bootstrap
     # problems on conda-forge
-    - petl
     - petlx
     # others
     - Sphinx
