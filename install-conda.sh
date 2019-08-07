@@ -81,7 +81,6 @@ else
     # Here we rebuild the environment from the unpinned file, which is
     # what a maintainer will do when they want to upgrade the pinned
     # definition files.
-    CONDANAME=malariagen
     conda env remove -v --name=$CONDANAME
     echo "[binder] recreating $ENVPINNED"
     echo "[binder] installing conda packages"
