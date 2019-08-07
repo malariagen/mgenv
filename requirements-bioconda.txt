@@ -1,0 +1,8 @@
+bcftools
+htslib
+pyfasta
+pyfaidx
+pysam
+pysamstats
+samtools
+snakemake

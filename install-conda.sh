@@ -45,10 +45,6 @@ if [ ! -f miniconda.installed ]; then
 
     fi
 
-    # update conda
-    conda config --set channel_priority strict
-    conda update --yes -c conda-forge conda
-
     # mark success
     touch miniconda.installed
 
@@ -59,16 +55,14 @@ fi
 # return to original location
 cd $REPODIR
 
+# set conda channel options
+CHANNEL_OPTS="--override-channels --channel conda-forge --channel bioconda --channel defaults"
+SOLVER_OPTS="--strict-channel-priority"
+
 echo "[binder] installing packages"
 
-echo "[binder] ensure channel order"
-# N.B., cannot rely on environment.yml https://github.com/conda/conda/issues/7238
-conda config --add channels bioconda
-conda config --add channels conda-forge
-conda config --set channel_priority strict
-
 echo "[binder] ensure conda is up to date"
-conda update -c conda-forge --yes conda
+conda update $SOLVER_OPTS $CHANNEL_OPTS --yes conda
 conda --version
 
 if [ "$(uname)" == "Darwin" ]; then
@@ -81,19 +75,25 @@ if [ -f "$ENVPINNED" ]; then
     # Here we build the environment from the pinned definition file,
     # this is what we expect users to do.
     echo "[binder] creating environment $CONDANAME from $ENVPINNED"
-    conda env remove -v --name=$CONDANAME
-    conda env create -v --name $CONDANAME --file $ENVPINNED
+    conda env create -v --force --name $CONDANAME --file $ENVPINNED
+
 else
     # Here we rebuild the environment from the unpinned file, which is
     # what a maintainer will do when they want to upgrade the pinned
     # definition files.
-    echo "[binder] recreating $ENVPINNED"
     conda env remove -v --name=$CONDANAME
-    conda env create -v --name=$CONDANAME --file ${BINDERDIR}/environment.yml
-    conda env export -v --name=$CONDANAME > $ENVPINNED
+    echo "[binder] recreating $ENVPINNED"
+    echo "[binder] installing conda packages"
+    conda create --yes -v $SOLVER_OPTS $CHANNEL_OPTS --name $CONDANAME --file ${BINDERDIR}/requirements-conda-forge.txt --file ${BINDERDIR}/requirements-bioconda.txt
+    echo "[binder] installing packages from pypi"
+    source activate $CONDANAME
+    pip install -v -r ${BINDERDIR}/requirements-pypi.txt
+    echo "[binder] exporting environment"
+    conda env export -v $CHANNEL_OPTS --name=$CONDANAME > $ENVPINNED
     echo "*** $ENVPINNED ***"
     cat $ENVPINNED
     echo "*** $ENVPINNED ***"
+
 fi
 
 #if [[ -z "${MALARIAGEN_BINDER_HOME}" ]]; then
