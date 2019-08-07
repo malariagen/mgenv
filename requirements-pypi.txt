@@ -1,0 +1,11 @@
+# not on conda-forge
+cached_property
+anhima
+prettypandas
+scikits.bootstrap
+# problems on conda-forge
+petlx
+# others
+Sphinx
+sphinx-autobuild
+sphinx-bootstrap-theme

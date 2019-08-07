@@ -4,4 +4,5 @@
 deps
 # environment export directory
 export
-
+# pycharm
+.idea
