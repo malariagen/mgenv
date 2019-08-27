@@ -1,4 +1,4 @@
-name: gitRepos-c668a73
+name: malariagen
 channels:
   - conda-forge
   - bioconda
@@ -354,5 +354,3 @@ dependencies:
     - sphinxcontrib-qthelp==1.0.2
     - sphinxcontrib-serializinghtml==1.1.3
     - watchdog==0.9.0
-prefix: /home/lee/projects/KwiatGroup/VectorOps/gitRepos/binder/deps/conda/envs/gitRepos-c668a73
-
