@@ -1,0 +1,114 @@
+name: malariagen
+# N.B., we don't specify channels here because we cannot rely on 
+# the ordering in environment.yml 
+# https://github.com/conda/conda/issues/7238
+dependencies:
+  # conda-forge
+  - blas=*=openblas
+  - python=3.6
+  - bcolz
+  - biopython
+  - bokeh
+  - bqplot
+  - cartopy
+  - click
+  - cython
+  - cytoolz
+  - dask
+  - dask-kubernetes
+  - dask-ml
+  - distributed
+  - fastcluster
+  - fastparquet
+  - fusepy
+  - gcsfs
+  - graphviz
+  - h5py
+  - hmmlearn
+  - holoviews
+  - humanize
+  - intake
+  - intake-xarray
+  - intervaltree
+  - ipykernel
+  - ipython
+  - ipyleaflet
+  - ipywidgets
+  - jedi
+  - joblib
+  - jupyter
+  - jupyter_console
+  - jupyter_client
+  # N.B. jupyterhub versions need to match hub image
+  # https://repo2docker.readthedocs.io/en/latest/howto/jupyterhub_images.html
+  - jupyterhub=1.0.0
+  - jupyterlab
+  - jupyterlab_launcher
+  - jupytext
+  - lmfit
+  - matplotlib
+  - matplotlib-venn
+  - msgpack-python
+  - msprime
+  - mysqlclient
+  - nb_conda_kernels
+  - nbconvert
+  - nbserverproxy
+  - nodejs
+  - nose
+  - notebook
+  - numba
+  - numcodecs
+  - numexpr
+  - numpy
+  - openpyxl
+  - pandas
+  # problem, causes inconsistency:
+  # - peakutils
+  # problem, causes inconsistency:
+  # - petl
+  - pillow
+  - pomegranate
+  - psutil
+  - pytables
+  - python-graphviz
+  - python-kubernetes
+  - pyvcf
+  - pyzmq
+  - qtconsole
+  - s3fs
+  - scikit-allel
+  - scikit-image
+  - scikit-learn
+  - scipy
+  - seaborn
+  - toolz
+  - tornado
+  - xarray
+  - xlrd
+  - xlwt
+  - zarr
+  - zict
+  - pip
+  # bioconda
+  - bcftools
+  - htslib
+  - pyfasta
+  - pyfaidx
+  - pysam
+  - pysamstats
+  - samtools
+  - snakemake
+  - pip:
+    # not on conda-forge
+    - cached_property
+    - anhima
+    - prettypandas
+    - scikits.bootstrap
+    # problems on conda-forge
+    - petl
+    - petlx
+    # others
+    - Sphinx
+    - sphinx-autobuild
+    - sphinx-bootstrap-theme
