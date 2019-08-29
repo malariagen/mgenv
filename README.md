@@ -7,7 +7,7 @@ MalariaGEN resource centre team.
 ## Proposing changes
 
 If you want to propose changes to this repository, e.g., add or update
-a package in environment.yml, please submit a pull request. The
+a package in one of the `requirements-*.txt` files, please submit a pull request. The
 following commands show a typical workflow for doing this:
 
 - If you don't already have a local clone of the binder repo, fork the
@@ -36,7 +36,7 @@ git checkout -b 10-add-foo-package
 git push -u origin 10-add-foo-package
 ```
 
-- Make changes to environment.yml in a text editor.
+- Make changes to one or more of the `requirements-*.txt` files (e.g. `requirements-bioconda.txt` for the `bioconda` channel) in a text editor.
 
 - Delete the pinned environment files:
 
@@ -47,7 +47,7 @@ rm environment-pinned-*.yml
 - Commit the changes:
 
 ```
-git add environment.yml environment-pinned-linux.yml environment-pinned-osx.yml
+git add requirements-bioconda.txt requirements-conda-forge.txt requirements-pypi.txt environment-pinned-linux.yml environment-pinned-osx.yml
 git commit -m 'add foo package, wipe pinned environments'
 git push
 ```
