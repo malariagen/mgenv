@@ -85,6 +85,6 @@ bioconda::htslib=1.9
 bioconda::pyfasta
 bioconda::pyfaidx
 bioconda::pysam
-bioconda::pysamstats
+bioconda::pysamstats=1.1.2
 bioconda::samtools=1.9
 bioconda::snakemake
