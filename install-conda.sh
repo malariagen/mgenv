@@ -57,13 +57,17 @@ cd $REPODIR
 
 # set conda channel options
 CHANNEL_OPTS="--override-channels --channel conda-forge --channel bioconda --channel defaults"
-SOLVER_OPTS="--strict-channel-priority"
 
 echo "[binder] installing packages"
 
-echo "[binder] ensure conda is up to date"
-conda update $SOLVER_OPTS $CHANNEL_OPTS --yes conda
+echo "[binder] install conda"
+# N.B., pin conda version here, so we don't get any surprises if conda
+# behaviour changes in a future release.
+conda install $CHANNEL_OPTS --yes conda==4.7.11
 conda --version
+
+echo "[binder] check channel priority - this must be 'true' or 'flexible', ***not*** 'strict'"
+conda config --show channel_priority
 
 if [ "$(uname)" == "Darwin" ]; then
     ENVPINNED=${BINDERDIR}/environment-pinned-osx.yml
@@ -78,13 +82,13 @@ if [ -f "$ENVPINNED" ]; then
     conda env create -v --force --name $CONDANAME --file $ENVPINNED
 
 else
-    # Here we rebuild the environment from the unpinned file, which is
-    # what a maintainer will do when they want to upgrade the pinned
+    # Here we rebuild the environment from the unpinned requirements files,
+    # which is what a maintainer will do when they want to upgrade the pinned
     # definition files.
     conda env remove -v --name=$CONDANAME
     echo "[binder] recreating $ENVPINNED"
     echo "[binder] installing conda packages"
-    conda create --yes -v $SOLVER_OPTS $CHANNEL_OPTS --name $CONDANAME --file ${BINDERDIR}/requirements-conda-forge.txt --file ${BINDERDIR}/requirements-bioconda.txt
+    conda create --yes -v $CHANNEL_OPTS --name $CONDANAME --file ${BINDERDIR}/requirements-conda.txt
     echo "[binder] installing packages from pypi"
     source activate $CONDANAME
     pip install -v -r ${BINDERDIR}/requirements-pypi.txt
