@@ -1,6 +1,7 @@
 # not on conda-forge
 cached_property
 anhima
+gsutil
 prettypandas
 scikits.bootstrap
 # problems on conda-forge
