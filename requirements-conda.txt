@@ -52,9 +52,9 @@ conda-forge::notebook
 conda-forge::numba
 conda-forge::numcodecs
 conda-forge::numexpr
-conda-forge::numpy=1.17.1
+conda-forge::numpy=1.17.3
 conda-forge::openpyxl
-conda-forge::pandas=0.25.1
+conda-forge::pandas=0.25.3
 conda-forge::peakutils
 conda-forge::petl
 conda-forge::pillow
