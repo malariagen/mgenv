@@ -1,4 +1,4 @@
-name: malariagen-99dcf06
+name: malariagen-c8bd6ae
 channels:
   - conda-forge
   - bioconda
@@ -8,7 +8,7 @@ dependencies:
   - adal=1.2.2=py_0
   - aioeasywebdav=2.4.0=py36_1000
   - aiohttp=3.6.1=py36h516909a_0
-  - alembic=1.3.0=py_0
+  - alembic=1.3.1=py_0
   - appdirs=1.4.3=py_1
   - asciitree=0.3.3=py_2
   - asteval=0.9.16=pyh5ca1d4c_0
@@ -25,15 +25,15 @@ dependencies:
   - blinker=1.4=py_1
   - blosc=1.17.0=he1b5a44_1
   - bokeh=1.4.0=py36_0
-  - boto3=1.10.14=py_0
-  - botocore=1.13.14=py_0
-  - bqplot=0.12.0=py_0
+  - boto3=1.10.17=py_0
+  - botocore=1.13.17=py_0
+  - bqplot=0.12.1=py_0
   - branca=0.3.1=py_0
   - bzip2=1.0.8=h516909a_1
   - ca-certificates=2019.9.11=hecc5488_0
-  - cachetools=2.1.0=py_0
+  - cachetools=3.1.1=py_0
   - cairo=1.16.0=hfb77d84_1002
-  - cartopy=0.17.0=py36hd759880_1006
+  - cartopy=0.17.0=py36hbeedcd3_1007
   - certifi=2019.9.11=py36_0
   - certipy=0.1.3=py_0
   - cffi=1.13.2=py36h8022711_0
@@ -48,8 +48,8 @@ dependencies:
   - cycler=0.10.0=py_2
   - cython=0.29.14=py36he1b5a44_0
   - cytoolz=0.10.1=py36h516909a_0
-  - dask=2.7.0=py_0
-  - dask-core=2.7.0=py_0
+  - dask=2.7.0=py_1
+  - dask-core=2.7.0=py_1
   - dask-glm=0.2.0=py_1
   - dask-kubernetes=0.10.0=py_0
   - dask-ml=1.1.1=py_0
@@ -57,7 +57,7 @@ dependencies:
   - dbus=1.13.6=he372182_0
   - decorator=4.4.1=py_0
   - defusedxml=0.6.0=py_0
-  - distributed=2.7.0=py_0
+  - distributed=2.7.0=py_1
   - docutils=0.15.2=py36_0
   - dropbox=9.4.0=py_0
   - entrypoints=0.3=py36_1000
@@ -71,21 +71,21 @@ dependencies:
   - fontconfig=2.13.1=h86ecdb6_1001
   - freetype=2.10.0=he983fc9_1
   - fribidi=1.0.5=h516909a_1002
-  - fsspec=0.5.2=py_0
+  - fsspec=0.6.0=py_0
   - ftputil=3.4=py_0
   - fusepy=3.0.1=py_0
-  - gcsfs=0.3.1=py_0
+  - gcsfs=0.4.0=py_0
   - gdk-pixbuf=2.36.12=h7a26e22_1003
   - geos=3.7.2=he1b5a44_2
   - gettext=0.19.8.1=hc5be6a0_1002
   - ghostscript=9.22=hf484d3e_1001
   - giflib=5.1.7=h516909a_1
   - gitdb2=2.0.6=py_0
-  - gitpython=3.0.4=py_0
+  - gitpython=3.0.5=py_0
   - glib=2.58.3=py36h6f030ca_1002
   - gobject-introspection=1.58.2=py36h5503ade_1002
   - google-api-core=1.14.3=py36_0
-  - google-auth=1.6.3=py_0
+  - google-auth=1.7.0=py_0
   - google-auth-oauthlib=0.4.1=py_0
   - google-cloud-core=1.0.3=py_0
   - google-cloud-storage=1.20.0=py_0
@@ -133,7 +133,7 @@ dependencies:
   - jupyter_console=6.0.0=py_0
   - jupyter_core=4.5.0=py_0
   - jupyterhub=1.0.0=py36_0
-  - jupyterlab=1.2.2=py_0
+  - jupyterlab=1.2.3=py_0
   - jupyterlab_launcher=0.13.1=py_2
   - jupyterlab_server=1.0.6=py_0
   - kiwisolver=1.1.0=py36hc9558a2_0
@@ -141,7 +141,7 @@ dependencies:
   - kubernetes_asyncio=10.0.0=py_0
   - libblas=3.8.0=14_openblas
   - libcblas=3.8.0=14_openblas
-  - libclang=9.0.0=default_hde54327_3
+  - libclang=9.0.0=default_hde54327_4
   - libcroco=0.6.13=h8d621e5_0
   - libcurl=7.65.3=hda55be3_0
   - libdeflate=1.3=h516909a_0
@@ -176,8 +176,8 @@ dependencies:
   - lzo=2.10=h14c3975_1000
   - mako=1.1.0=py_0
   - markupsafe=1.1.1=py36h516909a_0
-  - matplotlib=3.1.2=py36_0
-  - matplotlib-base=3.1.2=py36h250f245_0
+  - matplotlib=3.1.2=py36_1
+  - matplotlib-base=3.1.2=py36h250f245_1
   - matplotlib-venn=0.11.5=py_1
   - mistune=0.8.4=py36h516909a_1000
   - monotonic=1.5=py_0
@@ -233,7 +233,7 @@ dependencies:
   - pkg-config=0.29.2=h14c3975_1005
   - pomegranate=0.11.2=py36hc9558a2_0
   - prettytable=0.7.2=py_3
-  - proj4=5.2.0=he1b5a44_1006
+  - proj=6.2.0=hc80f0dc_1
   - prometheus_client=0.7.1=py_0
   - prompt_toolkit=2.0.10=py_0
   - protobuf=3.10.1=py36he1b5a44_0
@@ -254,8 +254,8 @@ dependencies:
   - pynacl=1.3.0=py36h516909a_1001
   - pyopenssl=19.0.0=py36_0
   - pyparsing=2.4.5=py_0
-  - pyproj=1.9.6=py36h14380d9_0
-  - pyqt=5.12.3=py36hcca6a23_0
+  - pyproj=2.4.1=py36ha987037_0
+  - pyqt=5.12.3=py36hcca6a23_1
   - pyrsistent=0.15.5=py36h516909a_0
   - pysam=0.15.3=py36hbcae180_3
   - pysamstats=1.1.2=py36hed695b0_5
@@ -275,24 +275,24 @@ dependencies:
   - pyviz_comms=0.7.2=py_0
   - pywavelets=1.1.1=py36hc1659b7_0
   - pyyaml=5.1.2=py36h516909a_0
-  - pyzmq=18.1.0=py36h1768529_0
+  - pyzmq=18.1.1=py36h1768529_0
   - qt=5.12.5=hd8c4c69_1
   - qtconsole=4.5.5=py_0
   - ratelimiter=1.2.0=py36_1000
   - readline=8.0=hf8c457e_0
   - requests=2.22.0=py36_1
   - requests-oauthlib=1.2.0=py_0
-  - rsa=3.4.2=py_1
+  - rsa=4.0=py_0
   - ruamel.yaml=0.16.5=py36h516909a_1
   - ruamel.yaml.clib=0.2.0=py36h516909a_0
-  - s3fs=0.3.5=py_0
+  - s3fs=0.4.0=py_0
   - s3transfer=0.2.1=py36_0
   - samtools=1.9=h10a08f8_12
   - scikit-allel=1.2.1=py36hb3f55d8_0
   - scikit-image=0.16.2=py36hb3f55d8_0
   - scikit-learn=0.21.3=py36hcdab131_0
-  - scipy=1.3.1=py36h921218d_2
-  - seaborn=0.9.0=py_1
+  - scipy=1.3.2=py36h921218d_0
+  - seaborn=0.9.0=py_2
   - send2trash=1.5.0=py_0
   - setuptools=41.6.0=py36_1
   - shapely=1.6.4=py36hec07ddf_1006
@@ -302,12 +302,12 @@ dependencies:
   - snakemake-minimal=5.7.4=py_0
   - snappy=1.1.7=he1b5a44_1002
   - sortedcontainers=2.1.0=py_0
-  - sqlalchemy=1.3.10=py36h516909a_0
+  - sqlalchemy=1.3.11=py36h516909a_0
   - sqlite=3.30.1=hcee41ef_0
-  - statsmodels=0.10.1=py36hc1659b7_1
+  - statsmodels=0.10.1=py36hc1659b7_2
   - svgwrite=1.3.1=py_0
   - tblib=1.4.0=py_0
-  - terminado=0.8.2=py36_0
+  - terminado=0.8.3=py36_0
   - testpath=0.4.4=py_0
   - thrift=0.11.0=py36he1b5a44_1001
   - tk=8.6.9=hed695b0_1003
@@ -318,7 +318,7 @@ dependencies:
   - tskit=0.2.2=py36hc1659b7_0
   - typing_extensions=3.7.4.1=py36_0
   - uncertainties=3.1.2=py36_0
-  - urllib3=1.25.6=py36_0
+  - urllib3=1.25.7=py36_0
   - wcwidth=0.1.7=py_1
   - webencodings=0.5.1=py_1
   - websocket-client=0.56.0=py36_0
