@@ -80,6 +80,7 @@ conda-forge::xlrd
 conda-forge::xlwt
 conda-forge::zarr
 conda-forge::zict
+conda-forge::umap-learn
 bioconda::bcftools=1.9
 bioconda::htslib=1.9
 bioconda::pyfasta
