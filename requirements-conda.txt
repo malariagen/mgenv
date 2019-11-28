@@ -8,15 +8,15 @@ conda-forge::cartopy
 conda-forge::click
 conda-forge::cython
 conda-forge::cytoolz
-conda-forge::dask
+conda-forge::dask>=2.8.1
 conda-forge::dask-kubernetes
 conda-forge::dask-ml
-conda-forge::distributed
+conda-forge::distributed>=2.8.1
 conda-forge::fastcluster
 conda-forge::fastparquet
-conda-forge::fsspec
+conda-forge::fsspec>=0.6.1
 conda-forge::fusepy
-conda-forge::gcsfs
+conda-forge::gcsfs>=0.5.0
 conda-forge::graphviz
 conda-forge::h5py
 conda-forge::hmmlearn
@@ -54,7 +54,7 @@ conda-forge::numcodecs
 conda-forge::numexpr
 conda-forge::numpy=1.17.3
 conda-forge::openpyxl
-conda-forge::pandas=0.25.3
+conda-forge::pandas>=0.25.3
 conda-forge::peakutils
 conda-forge::petl
 conda-forge::pillow
@@ -67,7 +67,7 @@ conda-forge::python-kubernetes
 conda-forge::pyvcf
 conda-forge::pyzmq
 conda-forge::qtconsole
-conda-forge::s3fs
+conda-forge::s3fs>=0.4.0
 conda-forge::scikit-allel
 conda-forge::scikit-image
 conda-forge::scikit-learn

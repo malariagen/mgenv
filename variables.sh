@@ -1,15 +1,18 @@
 #!/bin/bash
 
+# determine containing directory
+BINDERDIR="$( cd "$(dirname "${BASH_SOURCE[0]}")" && pwd -P )"
+
 # determine path to parent repository
 REPODIR="$( cd "$(dirname "${BASH_SOURCE[0]}")" && cd .. && pwd -P )"
 
 # determine binder version
-BINDERV=$( cd ${REPODIR}/binder && git rev-parse --short HEAD )
+BINDERV=$( cd ${BINDERDIR} && git rev-parse --short HEAD )
 
 # determine directory in which conda is installed
 if [[ -z "${MALARIAGEN_BINDER_HOME}" ]]; then
     # if not specified by user, default installation location
-    INSTALLDIR=${REPODIR}/binder/deps
+    INSTALLDIR=${BINDERDIR}/deps
 else
     # allow user to specify installation location
     INSTALLDIR=${MALARIAGEN_BINDER_HOME}
