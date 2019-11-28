@@ -63,11 +63,16 @@ echo "[binder] installing packages"
 echo "[binder] install conda"
 # N.B., pin conda version here, so we don't get any surprises if conda
 # behaviour changes in a future release.
-conda install $CHANNEL_OPTS --yes conda==4.7.11
+conda install $CHANNEL_OPTS --yes conda==4.7.12
 conda --version
 
 echo "[binder] check channel priority - this must be 'true' or 'flexible', ***not*** 'strict'"
 conda config --show channel_priority
+CHANNEL_PRIORITY=$(conda config --show channel_priority)
+if [ "$CHANNEL_PRIORITY" != "channel_priority: flexible" ]; then
+    echo "[binder] channel priority is not flexible, aborting"
+    exit 1
+fi
 
 if [ "$(uname)" == "Darwin" ]; then
     ENVPINNED=${BINDERDIR}/environment-pinned-osx.yml
