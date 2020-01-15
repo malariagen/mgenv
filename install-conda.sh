@@ -63,7 +63,7 @@ echo "[binder] installing packages"
 echo "[binder] install conda"
 # N.B., pin conda version here, so we don't get any surprises if conda
 # behaviour changes in a future release.
-conda install $CHANNEL_OPTS --yes conda==4.7.12
+conda install $CHANNEL_OPTS --yes conda==4.8.1
 conda --version
 
 echo "[binder] check channel priority - this must be 'true' or 'flexible', ***not*** 'strict'"
