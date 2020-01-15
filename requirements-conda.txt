@@ -1,7 +1,7 @@
-conda-forge::python=3.6.7
+conda-forge::python=3.7.6
 conda-forge::blas=*=openblas
 conda-forge::bcolz
-conda-forge::biopython=1.74
+conda-forge::biopython>=1.76
 conda-forge::bokeh
 conda-forge::bqplot
 conda-forge::cartopy
@@ -52,7 +52,7 @@ conda-forge::notebook
 conda-forge::numba
 conda-forge::numcodecs
 conda-forge::numexpr
-conda-forge::numpy=1.17.3
+conda-forge::numpy>=1.17.3
 conda-forge::openpyxl
 conda-forge::pandas>=0.25.3
 conda-forge::peakutils

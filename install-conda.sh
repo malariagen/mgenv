@@ -63,7 +63,7 @@ echo "[binder] installing packages"
 echo "[binder] install conda"
 # N.B., pin conda version here, so we don't get any surprises if conda
 # behaviour changes in a future release.
-conda install $CHANNEL_OPTS --yes conda==4.7.12
+conda install $CHANNEL_OPTS --yes conda==4.8.1
 conda --version
 
 echo "[binder] check channel priority - this must be 'true' or 'flexible', ***not*** 'strict'"
@@ -98,7 +98,10 @@ else
     source activate $CONDANAME
     pip install -v -r ${BINDERDIR}/requirements-pypi.txt
     echo "[binder] exporting environment"
-    conda env export -v $CHANNEL_OPTS --name=$CONDANAME > $ENVPINNED
+    # N.B., here we add the conda-forge/label/broken channel so that the install
+    # will still work in the future, even if some conda-forge packages have been
+    # moved to the broken channel.
+    conda env export -v $CHANNEL_OPTS --channel=conda-forge/label/broken --name=$CONDANAME > $ENVPINNED
     echo "*** $ENVPINNED ***"
     cat $ENVPINNED
     echo "*** $ENVPINNED ***"
