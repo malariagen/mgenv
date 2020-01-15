@@ -98,7 +98,10 @@ else
     source activate $CONDANAME
     pip install -v -r ${BINDERDIR}/requirements-pypi.txt
     echo "[binder] exporting environment"
-    conda env export -v $CHANNEL_OPTS --name=$CONDANAME > $ENVPINNED
+    # N.B., here we add the conda-forge/label/broken channel so that the install
+    # will still work in the future, even if some conda-forge packages have been
+    # moved to the broken channel.
+    conda env export -v $CHANNEL_OPTS --channel=conda-forge/label/broken --name=$CONDANAME > $ENVPINNED
     echo "*** $ENVPINNED ***"
     cat $ENVPINNED
     echo "*** $ENVPINNED ***"
