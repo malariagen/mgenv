@@ -8,10 +8,10 @@ conda-forge::cartopy
 conda-forge::click
 conda-forge::cython
 conda-forge::cytoolz
-conda-forge::dask>=2.8.1
+conda-forge::dask=2.9.0
 conda-forge::dask-kubernetes
 conda-forge::dask-ml
-conda-forge::distributed>=2.8.1
+conda-forge::distributed=2.9.0
 conda-forge::fastcluster
 conda-forge::fastparquet
 conda-forge::fsspec>=0.6.1
