@@ -1,4 +1,4 @@
-me: malariagen-21ca02e
+name: malariagen-21ca02e
 channels:
   - conda-forge
   - bioconda
