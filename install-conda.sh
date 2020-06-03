@@ -75,16 +75,16 @@ if [ "$CHANNEL_PRIORITY" != "channel_priority: flexible" ]; then
 fi
 
 if [ "$(uname)" == "Darwin" ]; then
-    ENVPINNED=${BINDERDIR}/environment-pinned-osx.yml
+    OS=osx
 else
-    ENVPINNED=${BINDERDIR}/environment-pinned-linux.yml
+    OS=linux
 fi
 
 if [ -f "$ENVPINNED" ]; then
     # Here we build the environment from the pinned definition file,
     # this is what we expect users to do.
     echo "[binder] creating environment $CONDANAME from $ENVPINNED"
-    conda env create -v --force --name $CONDANAME --file $ENVPINNED
+    conda env create -v --force --name $CONDANAME --file ${BINDERDIR}/environment-pinned-${OS}.yml
 
 else
     # Here we rebuild the environment from the unpinned requirements files,
@@ -93,7 +93,7 @@ else
     conda env remove -v --name=$CONDANAME
     echo "[binder] recreating $ENVPINNED"
     echo "[binder] installing conda packages"
-    conda create --yes -v --channel-priority $CHANNEL_OPTS --name $CONDANAME --file ${BINDERDIR}/requirements-conda.txt
+    conda create --yes -v --channel-priority $CHANNEL_OPTS --name $CONDANAME --file ${BINDERDIR}/requirements-conda.txt --file ${BINDERDIR}/requirements-compilers-${OS}.yml
     echo "[binder] installing packages from pypi"
     source activate $CONDANAME
     pip install -v -r ${BINDERDIR}/requirements-pypi.txt
