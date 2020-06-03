@@ -33,7 +33,7 @@ if [ ! -f miniconda.installed ]; then
     if [ "$(uname)" == "Darwin" ]; then
         # Install for Mac OS X platform
         # download miniconda
-        curl --continue-at - --remote-name https://repo.continuum.io/miniconda/Miniconda3-latest-MacOSX-x86_64.sh
+        curl --continue-at - --remote-name https://repo.anaconda.com/miniconda/Miniconda3-latest-MacOSX-x86_64.sh
 
         # install miniconda
         bash Miniconda3-latest-MacOSX-x86_64.sh -b -p conda
@@ -41,7 +41,7 @@ if [ ! -f miniconda.installed ]; then
     elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
         # Install for GNU/Linux platform
         # download miniconda
-        wget --no-clobber https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh
+        wget --no-clobber https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
 
         # install miniconda
         bash Miniconda3-latest-Linux-x86_64.sh -b -p conda
