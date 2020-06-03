@@ -8,6 +8,9 @@
 # ensure script errors if any command fails
 set -e
 
+# debug
+set -x
+
 # determine containing directory
 BINDERDIR="$( cd "$(dirname "${BASH_SOURCE[0]}")" && pwd -P )"
 
