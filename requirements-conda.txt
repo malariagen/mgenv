@@ -89,4 +89,4 @@ bioconda::pyfaidx
 bioconda::pysam
 bioconda::pysamstats=1.1.2
 bioconda::samtools=1.9
-bioconda::snakemake
+bioconda::snakemake>=5.19.1
