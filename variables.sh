@@ -7,7 +7,11 @@ BINDERDIR="$( cd "$(dirname "${BASH_SOURCE[0]}")" && pwd -P )"
 REPODIR="$( cd "$(dirname "${BASH_SOURCE[0]}")" && cd .. && pwd -P )"
 
 # determine binder version
-BINDERV=$( cd ${BINDERDIR} && git rev-parse --short HEAD )
+BINDERV=$( cd ${BINDERDIR} && git tag --points-at HEAD )
+if [ -z "$BINDERV" ]; then
+    # not on a tagged version, use commit hash
+    BINDERV=$( cd ${BINDERDIR} && git rev-parse --short HEAD )
+fi
 
 # determine directory in which conda is installed
 if [[ -z "${MALARIAGEN_BINDER_HOME}" ]]; then
@@ -18,7 +22,7 @@ else
     INSTALLDIR=${MALARIAGEN_BINDER_HOME}
 fi
 
-# determine name of parent repository, use as conda environment name
+# determine conda environment name, use name of parent directory
 CONDANAME=${REPODIR##*/}-$BINDERV
 
 # add miniconda to the path

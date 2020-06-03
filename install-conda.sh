@@ -8,6 +8,9 @@
 # ensure script errors if any command fails
 set -e
 
+# debug
+# set -x
+
 # determine containing directory
 BINDERDIR="$( cd "$(dirname "${BASH_SOURCE[0]}")" && pwd -P )"
 
@@ -30,7 +33,7 @@ if [ ! -f miniconda.installed ]; then
     if [ "$(uname)" == "Darwin" ]; then
         # Install for Mac OS X platform
         # download miniconda
-        curl --continue-at - --remote-name https://repo.continuum.io/miniconda/Miniconda3-latest-MacOSX-x86_64.sh
+        curl --continue-at - --remote-name https://repo.anaconda.com/miniconda/Miniconda3-latest-MacOSX-x86_64.sh
 
         # install miniconda
         bash Miniconda3-latest-MacOSX-x86_64.sh -b -p conda
@@ -38,7 +41,7 @@ if [ ! -f miniconda.installed ]; then
     elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
         # Install for GNU/Linux platform
         # download miniconda
-        wget --no-clobber https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh
+        wget --no-clobber https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
 
         # install miniconda
         bash Miniconda3-latest-Linux-x86_64.sh -b -p conda
@@ -63,7 +66,7 @@ echo "[binder] installing packages"
 echo "[binder] install conda"
 # N.B., pin conda version here, so we don't get any surprises if conda
 # behaviour changes in a future release.
-conda install $CHANNEL_OPTS --yes conda==4.8.1
+conda install $CHANNEL_OPTS --yes conda==4.8.3
 conda --version
 
 echo "[binder] check channel priority - this must be 'true' or 'flexible', ***not*** 'strict'"
@@ -75,10 +78,12 @@ if [ "$CHANNEL_PRIORITY" != "channel_priority: flexible" ]; then
 fi
 
 if [ "$(uname)" == "Darwin" ]; then
-    ENVPINNED=${BINDERDIR}/environment-pinned-osx.yml
+    OS=osx
 else
-    ENVPINNED=${BINDERDIR}/environment-pinned-linux.yml
+    OS=linux
 fi
+
+ENVPINNED=${BINDERDIR}/environment-pinned-${OS}.yml
 
 if [ -f "$ENVPINNED" ]; then
     # Here we build the environment from the pinned definition file,
@@ -93,7 +98,7 @@ else
     conda env remove -v --name=$CONDANAME
     echo "[binder] recreating $ENVPINNED"
     echo "[binder] installing conda packages"
-    conda create --yes -v --channel-priority $CHANNEL_OPTS --name $CONDANAME --file ${BINDERDIR}/requirements-conda.txt
+    conda create --yes -v --channel-priority $CHANNEL_OPTS --name $CONDANAME --file ${BINDERDIR}/requirements-conda.txt --file ${BINDERDIR}/requirements-compilers-${OS}.txt
     echo "[binder] installing packages from pypi"
     source activate $CONDANAME
     pip install -v -r ${BINDERDIR}/requirements-pypi.txt

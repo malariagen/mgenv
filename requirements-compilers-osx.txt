@@ -1,0 +1,3 @@
+conda-forge::clang_osx-64
+conda-forge::clangxx_osx-64
+conda-forge::gfortran_osx-64
