@@ -9,7 +9,7 @@
 set -e
 
 # debug
-set -x
+# set -x
 
 # determine containing directory
 BINDERDIR="$( cd "$(dirname "${BASH_SOURCE[0]}")" && pwd -P )"
