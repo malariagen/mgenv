@@ -61,6 +61,7 @@ conda-forge::pillow
 conda-forge::pip
 conda-forge::pomegranate
 conda-forge::psutil
+conda-forge::pyprojroot
 conda-forge::pytables
 conda-forge::python-graphviz
 conda-forge::python-kubernetes
