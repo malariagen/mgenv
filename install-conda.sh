@@ -63,7 +63,7 @@ echo "[binder] installing packages"
 echo "[binder] install conda"
 # N.B., pin conda version here, so we don't get any surprises if conda
 # behaviour changes in a future release.
-conda install $CHANNEL_OPTS --yes conda==4.8.1
+conda install $CHANNEL_OPTS --yes conda==4.8.3
 conda --version
 
 echo "[binder] check channel priority - this must be 'true' or 'flexible', ***not*** 'strict'"
@@ -93,7 +93,7 @@ else
     conda env remove -v --name=$CONDANAME
     echo "[binder] recreating $ENVPINNED"
     echo "[binder] installing conda packages"
-    conda create --yes -v --channel-priority $CHANNEL_OPTS --name $CONDANAME --file ${BINDERDIR}/requirements-conda.txt --file ${BINDERDIR}/requirements-compilers-${OS}.yml
+    conda create --yes -v --channel-priority $CHANNEL_OPTS --name $CONDANAME --file ${BINDERDIR}/requirements-conda.txt --file ${BINDERDIR}/requirements-compilers-${OS}.txt
     echo "[binder] installing packages from pypi"
     source activate $CONDANAME
     pip install -v -r ${BINDERDIR}/requirements-pypi.txt
