@@ -47,6 +47,7 @@ conda-forge::msprime
 conda-forge::mysqlclient
 conda-forge::nbconvert
 conda-forge::nbserverproxy
+conda-forge::ncurses
 conda-forge::nodejs
 conda-forge::nose
 conda-forge::notebook
