@@ -80,11 +80,13 @@ else
     OS=linux
 fi
 
+ENVPINNED=${BINDERDIR}/environment-pinned-${OS}.yml
+
 if [ -f "$ENVPINNED" ]; then
     # Here we build the environment from the pinned definition file,
     # this is what we expect users to do.
     echo "[binder] creating environment $CONDANAME from $ENVPINNED"
-    conda env create -v --force --name $CONDANAME --file ${BINDERDIR}/environment-pinned-${OS}.yml
+    conda env create -v --force --name $CONDANAME --file $ENVPINNED
 
 else
     # Here we rebuild the environment from the unpinned requirements files,
