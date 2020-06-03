@@ -28,6 +28,7 @@ conda-forge::intervaltree
 conda-forge::ipykernel
 conda-forge::ipython
 conda-forge::ipyleaflet
+conda-forge::ipytree
 conda-forge::ipywidgets
 conda-forge::jedi
 conda-forge::joblib
