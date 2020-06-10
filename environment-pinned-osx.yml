@@ -1,4 +1,4 @@
-name: malariagen-3bc4e19
+name: malariagen-a5b3034
 channels:
   - conda-forge
   - bioconda
@@ -26,8 +26,8 @@ dependencies:
   - blinker=1.4=py_1
   - blosc=1.18.1=h4a8c4bd_0
   - bokeh=2.0.1=py37hc8dfbb8_0
-  - boto3=1.13.21=pyh9f0ad1d_0
-  - botocore=1.16.21=pyh9f0ad1d_0
+  - boto3=1.13.22=pyh9f0ad1d_0
+  - botocore=1.16.22=pyh9f0ad1d_0
   - bqplot=0.12.12=pyh9f0ad1d_0
   - branca=0.3.1=py_0
   - brotlipy=0.7.0=py37h9bfed18_1000
@@ -126,13 +126,14 @@ dependencies:
   - imagemagick=7.0.8_54=pl526h65d2115_0
   - importlib-metadata=1.6.0=py37hc8dfbb8_0
   - importlib_metadata=1.6.0=0
-  - intake=0.5.5=py_0
+  - intake=0.6.0=py_0
   - intake-xarray=0.3.1=py_0
   - intervaltree=3.0.2=py_0
   - ipykernel=5.3.0=py37h43977f1_0
   - ipyleaflet=0.13.0=pyh9f0ad1d_0
   - ipython=7.15.0=py37hc8dfbb8_0
   - ipython_genutils=0.2.0=py_1
+  - ipytree=0.1.8=py_0
   - ipywidgets=7.5.1=py_0
   - isl=0.19=0
   - jbig=2.1=h0b31af3_2002
@@ -175,7 +176,7 @@ dependencies:
   - libopenblas=0.3.9=h3d69b6c_0
   - libpng=1.6.37=hbbe82c9_1
   - libpq=12.2=h489d428_1
-  - libprotobuf=3.12.1=hd174df1_0
+  - libprotobuf=3.12.3=hd174df1_0
   - librsvg=2.44.14=h423af4f_0
   - libsodium=1.0.17=h01d97ff_0
   - libssh2=1.9.0=h39bdce6_2
@@ -240,6 +241,7 @@ dependencies:
   - paramiko=2.7.1=py37_0
   - parso=0.7.0=pyh9f0ad1d_0
   - partd=1.1.0=py_0
+  - pathlib=1.0.1=py37hc8dfbb8_2
   - patsy=0.5.1=py_0
   - pcre=8.44=h4a8c4bd_0
   - peakutils=1.3.3=py_0
@@ -257,7 +259,7 @@ dependencies:
   - prometheus_client=0.8.0=pyh9f0ad1d_0
   - prompt-toolkit=3.0.5=py_0
   - prompt_toolkit=3.0.5=0
-  - protobuf=3.12.1=py37h570ac47_0
+  - protobuf=3.12.3=py37h570ac47_0
   - psutil=5.7.0=py37h9bfed18_1
   - pthread-stubs=0.4=h1de35cc_1001
   - ptyprocess=0.6.0=py_1001
@@ -278,6 +280,7 @@ dependencies:
   - pyopenssl=19.1.0=py_1
   - pyparsing=2.4.7=pyh9f0ad1d_0
   - pyproj=2.6.1.post1=py37hbd4ead9_0
+  - pyprojroot=0.2.0=py_0
   - pyqt=5.12.3=py37ha62fc16_3
   - pyrsistent=0.16.0=py37h9bfed18_0
   - pysam=0.15.3=py37h726f235_1
@@ -322,8 +325,8 @@ dependencies:
   - six=1.15.0=pyh9f0ad1d_0
   - slacker=0.14.0=py_0
   - smmap=3.0.4=pyh9f0ad1d_0
-  - snakemake=5.19.0=0
-  - snakemake-minimal=5.19.0=py_0
+  - snakemake=5.19.1=0
+  - snakemake-minimal=5.19.1=py_0
   - sortedcontainers=2.1.0=py_0
   - sqlalchemy=1.3.17=py37h9bfed18_0
   - sqlite=3.30.1=h93121df_0

@@ -22,12 +22,13 @@ conda-forge::h5py
 conda-forge::hmmlearn
 conda-forge::holoviews
 conda-forge::humanize
-conda-forge::intake
+conda-forge::intake>=0.6.0
 conda-forge::intake-xarray
 conda-forge::intervaltree
 conda-forge::ipykernel
 conda-forge::ipython
 conda-forge::ipyleaflet
+conda-forge::ipytree
 conda-forge::ipywidgets
 conda-forge::jedi
 conda-forge::joblib
@@ -46,6 +47,7 @@ conda-forge::msprime
 conda-forge::mysqlclient
 conda-forge::nbconvert
 conda-forge::nbserverproxy
+conda-forge::ncurses
 conda-forge::nodejs
 conda-forge::nose
 conda-forge::notebook
@@ -61,6 +63,7 @@ conda-forge::pillow
 conda-forge::pip
 conda-forge::pomegranate
 conda-forge::psutil
+conda-forge::pyprojroot
 conda-forge::pytables
 conda-forge::python-graphviz
 conda-forge::python-kubernetes
@@ -88,4 +91,4 @@ bioconda::pyfaidx
 bioconda::pysam
 bioconda::pysamstats=1.1.2
 bioconda::samtools=1.9
-bioconda::snakemake
+bioconda::snakemake>=5.19.0
