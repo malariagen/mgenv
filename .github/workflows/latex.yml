@@ -1,0 +1,22 @@
+name: latex
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+  workflow_dispatch:
+jobs:
+  build:
+    strategy:
+      matrix:
+        os:
+          - ubuntu-latest
+          - macos-latest
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v2
+      - name: Install LaTex
+        run: |
+          ./install-texlive.sh
+          source ./env.sh
+          pdflatex --version
