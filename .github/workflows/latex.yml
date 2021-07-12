@@ -17,6 +17,7 @@ jobs:
       - uses: actions/checkout@v2
       - name: Install LaTex
         run: |
-          ./install-texlive.sh
-          source ./env.sh
-          pdflatex --version
+          echo hello world
+#          ./install-texlive.sh
+#          source ./env.sh
+#          pdflatex --version
