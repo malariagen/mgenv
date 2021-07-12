@@ -24,6 +24,4 @@ jobs:
       - uses: actions/upload-artifact@v2
         with:
           name: Upload pinned environments
-          path: |
-            environment-pinned-linux.yaml
-            environment-pinned-osx.yaml
+          path: environment-pinned-*.yml
