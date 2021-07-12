@@ -168,12 +168,10 @@ git push
 Come back here to https://github.com/malariagen/binder and make a
 pull request.
 
-After the PR is created, Travis CI will automatically run to check
+After the PR is created, GitHub actions will automatically run to check
 that the modified environment can be created, and will generate new
 versions of the pinned environment files. If CI passes, go to the
-logs and find the contents of the new `environment-pinned-linux.yml`
-and `environment-pinned-osx.yml` files, and copy-paste them back
-into local files, then commit and push to update the PR.
+actions, find and download the artifacts (which will contain new pinned environment files), then add them back in to your clone of the binder repo, and push to update the PR.
 
 ```
 git add environment-pinned-linux.yml environment-pinned-osx.yml
@@ -181,4 +179,4 @@ git commit -m 'add new pinned environment files from CI'
 git push
 ```
 
-If CI then passes, the pull request will be merged.
+GitHub actions will then run again to verify the pinned environment files can be used to create environments. If CI then passes, the pull request will be merged.

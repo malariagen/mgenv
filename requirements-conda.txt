@@ -76,10 +76,10 @@ scipy
 seaborn
 sgkit
 toolz
+umap-learn
 xarray
 xlrd
 xlwt
 # pin until we resolve https://github.com/malariagen/vector-data/issues/24
 zarr==2.6.1
 zict
-umap-learn
