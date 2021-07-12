@@ -1,23 +1,25 @@
-python==3.7.10  # pyup: ignore
-blas=*=openblas  # pyup: ignore
-biopython==1.79
-bokeh==2.3.2
-click==7.1.2
-cython==0.29.23
+python=3.7
+blas=*=openblas
+biopython
+bokeh
+click
+cython
 cytoolz
 # match qhub pinning
-dask=2.30.0  # pyup: ignore
+dask==2.30.0
 # match qhub pinning
-dask-gateway=0.9.0  # pyup: ignore
+dask-gateway==0.9.0
 dask-ml
 # match qhub pinning
-distributed=2.30.1  # pyup: ignore
+distributed==2.30.1
 fastcluster
 fastparquet
-fsspec==0.8.7  # pyup: ignore
+# pin until we resolve https://github.com/malariagen/vector-data/issues/24
+fsspec==0.8.7
 fusepy
-gcsfs==0.7.2  # pyup: ignore
-graphviz  # pyup: ignore
+# pin until we resolve https://github.com/malariagen/vector-data/issues/24
+gcsfs==0.7.2
+graphviz
 h5py
 hmmlearn
 holoviews
@@ -45,8 +47,8 @@ msprime
 mysqlclient
 nbconvert
 nbserverproxy
-ncurses  # pyup: ignore
-nodejs  # pyup: ignore
+ncurses
+nodejs
 nose
 notebook
 numba
@@ -58,25 +60,26 @@ pandas
 peakutils
 petl
 pillow
-pip  # pyup: ignore
-plotly==5.1.0
+pip
+plotly
 pomegranate
 psutil
 pyprojroot
 pytables
-python-graphviz  # pyup: ignore
+python-graphviz
 pyvcf
 s3fs
-scikit-allel==1.3.5
+scikit-allel
 scikit-image
 scikit-learn
 scipy
 seaborn
 sgkit
 toolz
-xarray==0.18.0
+umap-learn
+xarray
 xlrd
 xlwt
-zarr==2.6.1  # pyup: ignore
+# pin until we resolve https://github.com/malariagen/vector-data/issues/24
+zarr==2.6.1
 zict
-umap-learn
