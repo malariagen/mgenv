@@ -1,6 +1,4 @@
-import bcolz
 import Bio
-import cartopy
 import cython
 import cytoolz
 import dask
@@ -19,7 +17,6 @@ import numcodecs
 import numexpr
 import numpy
 import pandas
-# import peakutils
 import psutil
 import pyfasta
 import tables
@@ -31,9 +28,6 @@ import seaborn
 import toolz
 import xlrd
 import zarr
-import pysam
-import pysamstats
-import anhima
 import prettypandas
 import xlwt
 import hmmlearn
