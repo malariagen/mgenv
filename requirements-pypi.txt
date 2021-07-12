@@ -1,8 +1,10 @@
 # not on conda-forge
 cached_property
-anhima
 gsutil
+malariagen_data==0.8.0
 prettypandas
+pyfaidx
+pyfasta
 scikits.bootstrap
 # problems on conda-forge
 petlx

@@ -1,0 +1,31 @@
+# configure updates globally
+update: all
+
+# configure dependency pinning globally
+pin: True
+
+# set the default branch
+branch: master
+
+# update schedule
+schedule: "every month"
+
+# search for requirement files
+search: False
+
+requirements:
+  - requirements-compilers-linux.txt:
+      update: False
+      pin: False
+  - requirements-compilers-osx.txt:
+      update: False
+      pin: False
+  - requirements-conda.txt:
+      update: all
+      pin: True
+  - requirements-pypi.txt:
+      update: all
+      pin: True
+
+# allow to close stale PRs
+close_prs: True
