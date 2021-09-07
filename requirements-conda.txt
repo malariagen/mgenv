@@ -37,6 +37,7 @@ intervaltree
 ipykernel
 ipython
 ipyleaflet
+ipympl
 ipytree
 ipywidgets
 isort
