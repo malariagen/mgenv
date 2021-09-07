@@ -44,6 +44,7 @@ isort
 jedi
 joblib
 jupyter
+jupyter-book
 jupyter_console
 jupyter_client
 jupyter-resource-usage
@@ -97,7 +98,6 @@ seaborn
 sgkit
 sphinx
 sphinx-autobuild
-sphinx-bootstrap-theme
 streamlit
 toolz
 umap-learn
