@@ -59,7 +59,7 @@ fi
 cd $REPODIR
 
 # set conda channel options
-CHANNEL_OPTS="--override-channels --channel conda-forge --channel defaults"
+CHANNEL_OPTS="--override-channels --channel conda-forge --channel pyviz --channel defaults"
 
 echo "[binder] installing packages"
 
@@ -68,14 +68,6 @@ echo "[binder] install conda"
 # behaviour changes in a future release.
 conda install $CHANNEL_OPTS --yes conda==4.8.3
 conda --version
-
-#echo "[binder] check channel priority - this must be 'true' or 'flexible', ***not*** 'strict'"
-#conda config --show channel_priority
-#CHANNEL_PRIORITY=$(conda config --show channel_priority)
-#if [ "$CHANNEL_PRIORITY" != "channel_priority: flexible" ]; then
-#    echo "[binder] channel priority is not flexible, aborting"
-#    exit 1
-#fi
 
 if [ "$(uname)" == "Darwin" ]; then
     OS=osx

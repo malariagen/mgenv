@@ -1,10 +1,14 @@
 python=3.7
+black
 blas=*=openblas
 biopython
 bokeh
+bqplot
 click
+colorcet
 cython
 cytoolz
+dash
 # match qhub pinning
 dask==2.30.0
 # match qhub pinning
@@ -14,6 +18,7 @@ dask-ml
 distributed==2.30.1
 fastcluster
 fastparquet
+flake8
 # pin until we resolve https://github.com/malariagen/vector-data/issues/24
 fsspec==0.8.7
 fusepy
@@ -24,6 +29,8 @@ h5py
 hmmlearn
 holoviews
 humanize
+hvplot
+importnb
 intake
 intake-xarray
 intervaltree
@@ -32,13 +39,18 @@ ipython
 ipyleaflet
 ipytree
 ipywidgets
+isort
 jedi
 joblib
 jupyter
 jupyter_console
 jupyter_client
+jupyter-resource-usage
 jupyterlab
+jupyterlab_code_formatter
 jupyterlab_launcher
+jupyterlab-system-monitor
+jupyterlab-variableinspector
 lmfit
 matplotlib
 matplotlib-venn
@@ -47,6 +59,7 @@ msprime
 mysqlclient
 nbconvert
 nbserverproxy
+nbval
 ncurses
 nodejs
 nose
@@ -57,6 +70,8 @@ numexpr
 numpy
 openpyxl
 pandas
+panel
+param
 peakutils
 petl
 pillow
@@ -66,8 +81,11 @@ pomegranate
 psutil
 pyprojroot
 pytables
+pytest
+pytest-cov
 python-graphviz
 pyvcf
+pyviz_comms
 s3fs
 scikit-allel
 scikit-image
@@ -75,8 +93,12 @@ scikit-learn
 scipy
 seaborn
 sgkit
+sphinx
+streamlit
 toolz
 umap-learn
+voila
+voila-gridstack
 xarray
 xlrd
 xlwt
