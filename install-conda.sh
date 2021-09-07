@@ -66,6 +66,7 @@ echo "[binder] installing packages"
 echo "[binder] install conda"
 # N.B., pin conda version here, so we don't get any surprises if conda
 # behaviour changes in a future release.
+conda install $CHANNEL_OPTS --yes python=3.8
 conda install $CHANNEL_OPTS --yes conda==4.8.3
 conda --version
 
