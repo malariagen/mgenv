@@ -52,6 +52,7 @@ jupyterlab_code_formatter
 jupyterlab_launcher
 jupyterlab-system-monitor
 jupyterlab-variableinspector
+jupytext
 lmfit
 matplotlib
 matplotlib-venn
