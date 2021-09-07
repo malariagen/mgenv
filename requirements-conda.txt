@@ -96,6 +96,8 @@ scipy
 seaborn
 sgkit
 sphinx
+sphinx-autobuild
+sphinx-bootstrap-theme
 streamlit
 toolz
 umap-learn
