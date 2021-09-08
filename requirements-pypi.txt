@@ -6,5 +6,5 @@ prettypandas
 pyfaidx
 pyfasta
 scikits.bootstrap
-# problems on conda-forge
 petlx
+sh

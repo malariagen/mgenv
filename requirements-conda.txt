@@ -1,6 +1,6 @@
-python=3.7
+python =3.7
 black
-blas=*=openblas
+blas =*=openblas
 biopython
 bokeh
 bqplot
@@ -10,20 +10,18 @@ cython
 cytoolz
 dash
 # match qhub pinning
-dask==2.30.0
+dask ==2.30.0
 # match qhub pinning
-dask-gateway==0.9.0
+dask-gateway ==0.9.0
 dask-ml
 # match qhub pinning
-distributed==2.30.1
+distributed ==2.30.1
 fastcluster
 fastparquet
 flake8
-# pin until we resolve https://github.com/malariagen/vector-data/issues/24
-fsspec==0.8.7
+fsspec
 fusepy
-# pin until we resolve https://github.com/malariagen/vector-data/issues/24
-gcsfs==0.7.2
+gcsfs
 graphviz
 h5py
 hmmlearn
@@ -44,11 +42,11 @@ isort
 jedi
 joblib
 jupyter
-jupyter-book
+# jupyter-book
 jupyter_console
 jupyter_client
 jupyter-resource-usage
-jupyterlab
+jupyterlab >=3.0
 jupyterlab_code_formatter
 jupyterlab_launcher
 jupyterlab-system-monitor
@@ -101,11 +99,10 @@ sphinx-autobuild
 streamlit
 toolz
 umap-learn
-voila
+voila >=0.2.7
 voila-gridstack
 xarray
 xlrd
 xlwt
-# pin until we resolve https://github.com/malariagen/vector-data/issues/24
-zarr==2.6.1
+zarr
 zict
