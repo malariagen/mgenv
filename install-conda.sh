@@ -63,19 +63,10 @@ CHANNEL_OPTS="--override-channels --channel conda-forge --channel defaults"
 
 echo "[binder] installing packages"
 
-echo "[binder] install conda"
-# N.B., pin conda version here, so we don't get any surprises if conda
-# behaviour changes in a future release.
-conda install $CHANNEL_OPTS --yes conda==4.8.3
+echo "[binder] install conda and mamba"
+conda install $CHANNEL_OPTS --yes python=3.8 conda==4.10.3 mamba==0.15.3
 conda --version
-
-#echo "[binder] check channel priority - this must be 'true' or 'flexible', ***not*** 'strict'"
-#conda config --show channel_priority
-#CHANNEL_PRIORITY=$(conda config --show channel_priority)
-#if [ "$CHANNEL_PRIORITY" != "channel_priority: flexible" ]; then
-#    echo "[binder] channel priority is not flexible, aborting"
-#    exit 1
-#fi
+mamba --version
 
 if [ "$(uname)" == "Darwin" ]; then
     OS=osx
@@ -98,7 +89,8 @@ else
     conda env remove -v --name=$CONDANAME
     echo "[binder] recreating $ENVPINNED"
     echo "[binder] installing conda packages"
-    conda create --yes -v --strict-channel-priority $CHANNEL_OPTS --name $CONDANAME --file ${BINDERDIR}/requirements-conda.txt --file ${BINDERDIR}/requirements-compilers-${OS}.txt
+    # use mamba here because it's much much much better at solving dependencies
+    mamba create --yes -v --strict-channel-priority $CHANNEL_OPTS --name $CONDANAME --file ${BINDERDIR}/requirements-conda.txt --file ${BINDERDIR}/requirements-compilers-${OS}.txt
     echo "[binder] installing packages from pypi"
     source activate $CONDANAME
     pip install -v -r ${BINDERDIR}/requirements-pypi.txt
@@ -112,8 +104,3 @@ else
     echo "*** $ENVPINNED ***"
 
 fi
-
-#if [[ -z "${MALARIAGEN_BINDER_HOME}" ]]; then
-#    # clean conda caches
-#    conda clean --yes --all
-#fi

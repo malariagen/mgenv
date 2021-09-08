@@ -6,9 +6,5 @@ prettypandas
 pyfaidx
 pyfasta
 scikits.bootstrap
-# problems on conda-forge
 petlx
-# others
-Sphinx
-sphinx-autobuild
-sphinx-bootstrap-theme
+sh

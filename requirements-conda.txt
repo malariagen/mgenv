@@ -1,44 +1,58 @@
-python=3.7
-blas=*=openblas
+python =3.8
+black
+blas =*=openblas
 biopython
 bokeh
+bqplot
 click
+colorcet
 cython
 cytoolz
+dash
 # match qhub pinning
-dask==2.30.0
+dask ==2.30.0
 # match qhub pinning
-dask-gateway==0.9.0
+dask-gateway ==0.9.0
 dask-ml
 # match qhub pinning
-distributed==2.30.1
+distributed ==2.30.1
 fastcluster
 fastparquet
-# pin until we resolve https://github.com/malariagen/vector-data/issues/24
-fsspec==0.8.7
+flake8
+fsspec
 fusepy
-# pin until we resolve https://github.com/malariagen/vector-data/issues/24
-gcsfs==0.7.2
+gcsfs
 graphviz
 h5py
 hmmlearn
 holoviews
 humanize
+hvplot
+importnb
 intake
 intake-xarray
 intervaltree
 ipykernel
 ipython
 ipyleaflet
+ipympl
 ipytree
 ipywidgets
+isort
 jedi
 joblib
 jupyter
+# conflicts with voila via dependency on nbconvert
+# jupyter-book
 jupyter_console
 jupyter_client
-jupyterlab
+jupyter-resource-usage
+jupyterlab >=3.0
+jupyterlab_code_formatter
 jupyterlab_launcher
+jupyterlab-system-monitor
+jupyterlab-variableinspector
+jupytext
 lmfit
 matplotlib
 matplotlib-venn
@@ -47,6 +61,7 @@ msprime
 mysqlclient
 nbconvert
 nbserverproxy
+nbval
 ncurses
 nodejs
 nose
@@ -57,6 +72,8 @@ numexpr
 numpy
 openpyxl
 pandas
+panel
+param
 peakutils
 petl
 pillow
@@ -66,8 +83,11 @@ pomegranate
 psutil
 pyprojroot
 pytables
+pytest
+pytest-cov
 python-graphviz
 pyvcf
+pyviz_comms
 s3fs
 scikit-allel
 scikit-image
@@ -75,11 +95,15 @@ scikit-learn
 scipy
 seaborn
 sgkit
+sphinx
+sphinx-autobuild
+streamlit
 toolz
 umap-learn
+voila >=0.2.7
+voila-gridstack
 xarray
 xlrd
 xlwt
-# pin until we resolve https://github.com/malariagen/vector-data/issues/24
-zarr==2.6.1
+zarr
 zict
