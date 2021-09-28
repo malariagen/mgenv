@@ -1,4 +1,4 @@
-python =3.8
+python ==3.8.*
 black
 blas =*=openblas
 biopython
@@ -42,7 +42,7 @@ isort
 jedi
 joblib
 jupyter
-# conflicts with voila via dependency on nbconvert
+# currently conflicts with voila
 # jupyter-book
 jupyter_console
 jupyter_client
