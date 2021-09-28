@@ -42,7 +42,7 @@ isort
 jedi
 joblib
 jupyter
-# conflicts with voila
+# currently conflicts with voila
 # jupyter-book
 jupyter_console
 jupyter_client

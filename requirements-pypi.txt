@@ -1,7 +1,6 @@
 # not on conda-forge
 cached_property
 gsutil
-jupyter-book
 malariagen_data
 prettypandas
 pyfaidx
