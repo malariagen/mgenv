@@ -42,8 +42,7 @@ isort
 jedi
 joblib
 jupyter
-# conflicts with voila via dependency on nbconvert
-# jupyter-book
+jupyter-book
 jupyter_console
 jupyter_client
 jupyter-resource-usage
