@@ -43,8 +43,7 @@ isort
 jedi
 joblib
 jupyter
-# currently conflicts with voila
-# jupyter-book
+jupyter-book >=0.12.0
 jupyter_console
 jupyter_client
 jupyter-resource-usage
