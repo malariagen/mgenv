@@ -32,10 +32,11 @@ importnb
 intake
 intake-xarray
 intervaltree
+ipyigv
 ipykernel
-ipython
 ipyleaflet
 ipympl
+ipython
 ipytree
 ipywidgets
 isort
