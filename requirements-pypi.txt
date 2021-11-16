@@ -1,7 +1,7 @@
 # not on conda-forge
 cached_property
 gsutil
-malariagen_data
+malariagen_data >=0.15.0
 prettypandas
 pyfaidx
 pyfasta
