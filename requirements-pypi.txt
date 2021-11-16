@@ -1,6 +1,7 @@
 # not on conda-forge
 cached_property
 gsutil
+igv-jupyter
 malariagen_data >=0.15.0
 prettypandas
 pyfaidx
