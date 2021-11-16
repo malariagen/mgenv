@@ -4,6 +4,7 @@ blas =*=openblas
 biopython
 bokeh
 bqplot
+cartopy
 click
 colorcet
 cython
@@ -22,6 +23,9 @@ flake8
 fsspec
 fusepy
 gcsfs
+gdal
+geopandas
+geoviews
 graphviz
 h5py
 hmmlearn
@@ -81,13 +85,17 @@ pip
 plotly
 pomegranate
 psutil
+pyproj
 pyprojroot
+pyshp
 pytables
 pytest
 pytest-cov
 python-graphviz
 pyvcf
 pyviz_comms
+rasterio
+rioxarray
 s3fs
 scikit-allel
 scikit-image
@@ -95,6 +103,7 @@ scikit-learn
 scipy
 seaborn
 sgkit
+shapely
 sphinx
 sphinx-autobuild
 streamlit
