@@ -2,7 +2,7 @@
 cached_property
 gsutil
 igv-jupyter
-malariagen_data >=0.15.0
+malariagen_data >=2.0.0
 prettypandas
 pyfaidx
 pyfasta
