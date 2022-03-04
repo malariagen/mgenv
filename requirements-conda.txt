@@ -36,6 +36,7 @@ importnb
 intake
 intake-xarray
 intervaltree
+ipydatagrid
 ipyigv
 ipykernel
 ipyleaflet
