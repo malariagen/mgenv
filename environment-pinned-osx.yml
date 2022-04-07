@@ -581,7 +581,7 @@ dependencies:
     - google-reauth==0.1.1
     - gsutil==5.9
     - httplib2==0.20.4
-    - igv-notebook==0.1.0
+    - git+https://github.com/igvteam/igv-notebook@main#egg=igv_notebook
     - ipinfo==4.2.1
     - malariagen-data==4.0.1
     - monotonic==1.6
@@ -595,4 +595,3 @@ dependencies:
     - rsa==4.7.2
     - scikits-bootstrap==1.1.0
     - sh==1.14.2
-prefix: /Users/runner/work/binder/binder/deps/conda/envs/binder-2ddd16f
