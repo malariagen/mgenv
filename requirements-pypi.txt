@@ -1,11 +1,13 @@
 # not on conda-forge
 cached_property
 gsutil
-malariagen_data >=4.0.1
+malariagen_data >=5.0.1
+petlx
 prettypandas
 pyfaidx
 pyfasta
+python-gist
+rtree
 scikits.bootstrap
-petlx
 sh
 git+https://github.com/igvteam/igv-notebook@main#egg=igv_notebook
