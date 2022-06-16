@@ -10,4 +10,3 @@ python-gist
 rtree
 scikits.bootstrap
 sh
-git+https://github.com/igvteam/igv-notebook@main#egg=igv_notebook
