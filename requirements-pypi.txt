@@ -7,6 +7,5 @@ prettypandas
 pyfaidx
 pyfasta
 python-gist
-rtree
 scikits.bootstrap
 sh
