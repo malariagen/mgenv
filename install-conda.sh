@@ -64,7 +64,7 @@ CHANNEL_OPTS="--override-channels --channel conda-forge --channel defaults"
 echo "[binder] installing packages"
 
 echo "[binder] install conda and mamba"
-conda install $CHANNEL_OPTS --yes python=3.8 conda==4.10.3 mamba==0.15.3
+conda install $CHANNEL_OPTS --yes python=3.8 conda==4.8.2 mamba==0.24.0
 conda --version
 mamba --version
 
