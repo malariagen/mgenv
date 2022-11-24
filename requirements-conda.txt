@@ -1,4 +1,4 @@
-python ==3.9.*
+python ==3.8.*
 bcftools
 black
 blas =*=openblas
@@ -33,6 +33,7 @@ holoviews
 htslib
 humanize
 hvplot
+importlib_metadata <5.0
 importnb
 intake
 intake-xarray
@@ -112,7 +113,6 @@ snakemake
 sphinx
 sphinx-autobuild
 streamlit
-tabix
 toolz
 umap-learn
 voila >=0.2.7
