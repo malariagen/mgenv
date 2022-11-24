@@ -59,12 +59,13 @@ fi
 cd $REPODIR
 
 # set conda channel options
-CHANNEL_OPTS="--override-channels --channel conda-forge --channel defaults"
+CHANNEL_OPTS="--override-channels --channel conda-forge --channel bioconda --channel defaults"
 
 echo "[binder] installing packages"
 
 echo "[binder] install conda and mamba"
-conda install $CHANNEL_OPTS --yes python=3.8 conda==4.8.2 mamba==0.24.0
+conda install $CHANNEL_OPTS --yes python=3.10 mamba==1.0.0
+python --version
 conda --version
 mamba --version
 

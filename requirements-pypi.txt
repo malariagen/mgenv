@@ -1,6 +1,6 @@
 # not on conda-forge
 cached_property
-gsutil
+# gsutil
 malariagen_data >=7.0.0
 petlx
 prettypandas

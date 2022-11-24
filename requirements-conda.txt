@@ -1,4 +1,5 @@
-python ==3.8.*
+python ==3.10.*
+bcftools
 black
 blas =*=openblas
 biopython
@@ -10,13 +11,11 @@ colorcet
 cython
 cytoolz
 dash
-# match qhub pinning
-dask ==2.30.0
-# match qhub pinning
-dask-gateway ==0.9.0
+dask
+# match nebari-dask 2022.10.1 pinning
+dask-gateway ==2022.4.0
 dask-ml
-# match qhub pinning
-distributed ==2.30.1
+distributed
 fastcluster
 fastparquet
 flake8
@@ -26,10 +25,12 @@ gcsfs
 gdal
 geopandas
 geoviews
+google-cloud-sdk
 graphviz
 h5py
 hmmlearn
 holoviews
+htslib
 humanize
 hvplot
 importnb
@@ -98,6 +99,7 @@ pyviz_comms
 rasterio
 rioxarray
 rtree
+samtools
 s3fs
 scikit-allel
 scikit-image
@@ -109,6 +111,7 @@ shapely
 sphinx
 sphinx-autobuild
 streamlit
+tabix
 toolz
 umap-learn
 voila >=0.2.7
