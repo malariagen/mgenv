@@ -18,7 +18,7 @@ import numexpr
 import numpy
 import pandas
 import psutil
-import pyfasta
+import pyfaidx
 import tables
 import vcf
 import allel
