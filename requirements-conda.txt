@@ -11,11 +11,12 @@ colorcet
 cython
 cytoolz
 dash
-dask
-# match nebari-dask 2022.10.1 pinning
-dask-gateway ==2022.4.0
+# match nebari-dask 2022.11.1 pinning
+# dask
+# dask-gateway
+# distributed
+nebari-dask ==2022.11.1
 dask-ml
-distributed
 fastcluster
 fastparquet
 flake8
