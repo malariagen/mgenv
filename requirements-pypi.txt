@@ -1,7 +1,7 @@
 # not on conda-forge
 cached_property
 # gsutil
-malariagen_data >=7.0.0
+malariagen_data >=7.3.0
 petlx
 prettypandas
 pyfaidx
