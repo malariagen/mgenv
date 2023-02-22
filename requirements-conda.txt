@@ -96,7 +96,6 @@ pytables
 pytest
 pytest-cov
 python-graphviz
-pyvcf
 pyviz_comms
 rasterio
 rioxarray
