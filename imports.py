@@ -20,7 +20,6 @@ import pandas
 import psutil
 import pyfaidx
 import tables
-import vcf
 import allel
 import sklearn
 import scipy

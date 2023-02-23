@@ -1,4 +1,4 @@
-python ==3.9.*
+python ==3.10.*
 bcftools
 black
 blas =*=openblas
@@ -96,7 +96,6 @@ pytables
 pytest
 pytest-cov
 python-graphviz
-pyvcf
 pyviz_comms
 rasterio
 rioxarray
