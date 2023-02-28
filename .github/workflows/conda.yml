@@ -16,9 +16,14 @@ jobs:
       - name: Install conda and solve/verify conda environment
         run: |
           ./install-conda.sh
+      - name: Run tests
+        run: |
           source ./env.sh
           conda list
           python imports.py
+	  samtools --version
+	  bcftools --version
+	  tabix --version
       - uses: actions/upload-artifact@v2
         with:
           name: Upload pinned environments
