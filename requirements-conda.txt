@@ -1,5 +1,5 @@
 python ==3.10.*
-bcftools
+bcftools >=1.16
 black
 blas =*=openblas
 biopython
@@ -31,7 +31,7 @@ graphviz
 h5py
 hmmlearn
 holoviews
-htslib
+htslib >=1.16
 humanize
 hvplot
 importlib_metadata <5.0
