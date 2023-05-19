@@ -1,4 +1,4 @@
-python ==3.11.*
+python ==3.10.*
 bcftools >=1.16
 black
 blas =*=openblas
