@@ -3,7 +3,7 @@ bcftools >=1.16
 black
 blas =*=openblas
 biopython
-bokeh
+bokeh >=3.1.0
 bqplot
 cartopy
 click
@@ -11,11 +11,11 @@ colorcet
 cython
 cytoolz
 dash
-# match nebari-dask 2022.11.1 pinning
-# dask
-# dask-gateway
-# distributed
-nebari-dask ==2022.11.1
+# match nebari-dask 2022.11.1 pinning, ...ish
+# nebari-dask ==2022.11.1
+dask
+dask-gateway ==2022.10.0
+distributed
 dask-ml
 fastcluster
 fastparquet
