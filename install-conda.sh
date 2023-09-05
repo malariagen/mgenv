@@ -68,6 +68,7 @@ conda install $CHANNEL_OPTS --yes python=3.10 conda-libmamba-solver
 conda config --set solver libmamba
 python --version
 conda --version
+conda list conda-libmamba-solver
 
 if [ "$(uname)" == "Darwin" ]; then
     OS=osx
