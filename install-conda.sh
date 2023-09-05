@@ -63,11 +63,11 @@ CHANNEL_OPTS="--override-channels --channel conda-forge --channel bioconda --cha
 
 echo "[binder] installing packages"
 
-echo "[binder] install conda and mamba"
-conda install $CHANNEL_OPTS --yes python=3.10 libarchive mamba
+echo "[binder] install conda"
+conda install $CHANNEL_OPTS --yes python=3.10 conda-libmamba-solver
+conda config --set solver libmamba
 python --version
 conda --version
-mamba --version
 
 if [ "$(uname)" == "Darwin" ]; then
     OS=osx
@@ -90,8 +90,7 @@ else
     conda env remove -v --name=$CONDANAME
     echo "[binder] recreating $ENVPINNED"
     echo "[binder] installing conda packages"
-    # use mamba here because it's much much much better at solving dependencies
-    mamba create --yes -v --strict-channel-priority $CHANNEL_OPTS --name $CONDANAME --file ${BINDERDIR}/requirements-conda.txt --file ${BINDERDIR}/requirements-compilers-${OS}.txt
+    conda create --yes -v --strict-channel-priority $CHANNEL_OPTS --name $CONDANAME --file ${BINDERDIR}/requirements-conda.txt --file ${BINDERDIR}/requirements-compilers-${OS}.txt
     echo "[binder] installing packages from pypi"
     source activate $CONDANAME
     pip install -v -r ${BINDERDIR}/requirements-pypi.txt
