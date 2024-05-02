@@ -82,7 +82,7 @@ if [ -f "$ENVPINNED" ]; then
     # Here we build the environment from the pinned definition file,
     # this is what we expect users to do.
     echo "[binder] creating environment $CONDANAME from $ENVPINNED"
-    conda env create -v --force --name $CONDANAME --file $ENVPINNED
+    conda env create -v --yes --name $CONDANAME --file $ENVPINNED
 
 else
     # Here we rebuild the environment from the unpinned requirements files,
