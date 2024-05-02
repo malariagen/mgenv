@@ -1,6 +1,6 @@
 # not on conda-forge
 cached_property
-malariagen_data >=7.13.0
+malariagen_data >=9.0.0
 petlx
 prettypandas
 pyfaidx
