@@ -12,7 +12,7 @@ jobs:
         os: [ "macos-latest", "ubuntu-latest"]
     runs-on: ${{ matrix.os }}
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
       - name: Install conda and solve/verify conda environment
         run: |
           ./install-conda.sh
@@ -24,7 +24,7 @@ jobs:
           samtools --version
           bcftools --version
           tabix --version
-      - uses: actions/upload-artifact@v2
+      - uses: actions/upload-artifact@v4
         with:
           name: Upload pinned environments
           path: environment-pinned-*.yml
