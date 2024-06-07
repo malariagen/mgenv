@@ -26,5 +26,5 @@ jobs:
           tabix --version
       - uses: actions/upload-artifact@v4
         with:
-          name: Upload ${{ matrix.os }} pinned environment
+          name: environment-pinned-${{ matrix.os }}.yml
           path: environment-pinned-${{ matrix.os }}.yml
