@@ -71,9 +71,9 @@ conda --version
 conda list conda-libmamba-solver
 
 if [ "$(uname)" == "Darwin" ]; then
-    OS=osx
+    OS=macos-latest
 else
-    OS=linux
+    OS=ubuntu-latest
 fi
 
 ENVPINNED=${BINDERDIR}/environment-pinned-${OS}.yml
