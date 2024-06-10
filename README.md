@@ -174,7 +174,7 @@ versions of the pinned environment files. If CI passes, go to the
 actions, find and download the artifacts (which will contain new pinned environment files), then add them back in to your clone of the binder repo, and push to update the PR.
 
 ```
-git add environment-pinned-linux.yml environment-pinned-osx.yml
+git add environment-pinned-ubuntu-latest.yml environment-pinned-macos-latest.yml
 git commit -m 'add new pinned environment files from CI'
 git push
 ```

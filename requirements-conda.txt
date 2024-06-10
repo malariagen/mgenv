@@ -47,6 +47,7 @@ ipympl
 ipython
 ipytree
 ipywidgets
+iso3166
 isort
 jedi
 joblib
@@ -89,6 +90,7 @@ pip
 plotly
 pomegranate
 psutil
+pycountry
 pyproj
 pyprojroot
 pyshp
@@ -101,6 +103,7 @@ rasterio
 rioxarray
 rtree
 samtools
+s3cmd
 s3fs
 scikit-allel
 scikit-image
