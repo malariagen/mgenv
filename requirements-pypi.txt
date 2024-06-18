@@ -1,7 +1,8 @@
 # not on conda-forge
 cached_property
+coiled
 lxml_html_clean
-malariagen_data >=10.0.0
+malariagen_data >=10.2.0
 petlx
 prettypandas
 pyfaidx
