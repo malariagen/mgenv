@@ -1,4 +1,5 @@
 python ==3.10.*
+adlfs
 bcftools >=1.16
 black
 blas =*=openblas
@@ -7,6 +8,7 @@ bokeh >=3.1.0
 bqplot
 cartopy
 click
+coiled
 colorcet
 cython
 cytoolz
@@ -118,6 +120,7 @@ sphinx-autobuild
 streamlit
 toolz
 umap-learn
+vaex
 voila >=0.2.7
 voila-gridstack
 xarray
