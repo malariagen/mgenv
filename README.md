@@ -1,4 +1,4 @@
-# MalariaGEN binder
+# MalariaGEN conda and texlive environment
 
 This repository contains installation scripts and environment
 definitions for conda and texlive, for standardising environments
