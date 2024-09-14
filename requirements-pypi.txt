@@ -3,9 +3,9 @@ cached_property
 lxml_html_clean
 malariagen_data >=13.0.0
 petlx
-prettypandas
 pyfaidx
 python-gist
 scikits.bootstrap
 sh
 sgkit
+vaex
