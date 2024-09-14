@@ -36,7 +36,6 @@ holoviews
 htslib >=1.16
 humanize
 hvplot
-# importlib_metadata <5.0
 importnb
 intake
 intake-xarray
@@ -120,7 +119,6 @@ sphinx-autobuild
 streamlit
 toolz
 umap-learn
-vaex
 voila
 voila-gridstack
 xarray
