@@ -27,7 +27,6 @@ import seaborn
 import toolz
 import xlrd
 import zarr
-import prettypandas
 import xlwt
 import hmmlearn
 import petl
