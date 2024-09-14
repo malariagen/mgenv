@@ -111,7 +111,6 @@ scikit-image
 scikit-learn
 scipy
 seaborn
-sgkit
 shapely
 snakemake
 sphinx

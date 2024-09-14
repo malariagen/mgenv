@@ -8,3 +8,4 @@ pyfaidx
 python-gist
 scikits.bootstrap
 sh
+sgkit
