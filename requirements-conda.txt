@@ -1,4 +1,4 @@
-python ==3.10.*
+python ==3.12.*
 adlfs
 bcftools >=1.16
 black
@@ -36,7 +36,7 @@ holoviews
 htslib >=1.16
 humanize
 hvplot
-importlib_metadata <5.0
+# importlib_metadata <5.0
 importnb
 intake
 intake-xarray
@@ -54,11 +54,11 @@ isort
 jedi
 joblib
 jupyter
-jupyter-book >=0.12.0
+jupyter-book
 jupyter_console
 jupyter_client
 jupyter-resource-usage
-jupyterlab >=3.0
+jupyterlab
 jupyterlab_code_formatter
 jupyterlab_launcher
 jupyterlab-system-monitor
@@ -121,7 +121,7 @@ streamlit
 toolz
 umap-learn
 vaex
-voila >=0.2.7
+voila
 voila-gridstack
 xarray
 xlrd
