@@ -1,10 +1,11 @@
 # not on conda-forge
 cached_property
 lxml_html_clean
-malariagen_data >=13.0.0
+malariagen_data >=13.0.2
 petlx
 pyfaidx
 python-gist
+scikit-allel
 scikits.bootstrap
 sh
 sgkit
