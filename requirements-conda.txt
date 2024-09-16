@@ -106,7 +106,6 @@ rtree
 samtools
 s3cmd
 s3fs
-scikit-allel
 scikit-image
 scikit-learn
 scipy

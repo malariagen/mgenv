@@ -1,4 +1,4 @@
-name: mgenv-7464595
+name: mgenv-c194ddb
 channels:
   - conda-forge
   - bioconda
@@ -27,24 +27,24 @@ dependencies:
   - argparse-dataclass=2.0.0=pyhd8ed1ab_0
   - arrow=1.3.0=pyhd8ed1ab_0
   - asciitree=0.3.3=py_2
-  - asteval=1.0.2=pyhd8ed1ab_0
+  - asteval=1.0.4=pyhd8ed1ab_0
   - asttokens=2.4.1=pyhd8ed1ab_0
   - atk-1.0=2.38.0=h4bec284_2
   - attmap=0.13.2=pyhd8ed1ab_0
   - attrs=24.2.0=pyh71513ae_0
-  - aws-c-auth=0.7.29=h2dfa2de_1
+  - aws-c-auth=0.7.30=h0e83244_0
   - aws-c-cal=0.7.4=h8128ea2_1
   - aws-c-common=0.9.28=h00291cd_0
   - aws-c-compression=0.2.19=h8128ea2_1
-  - aws-c-event-stream=0.4.3=hf6f7cdd_1
-  - aws-c-http=0.8.8=h2f86973_2
+  - aws-c-event-stream=0.4.3=hcd1ed9e_2
+  - aws-c-http=0.8.9=h2f86973_0
   - aws-c-io=0.14.18=hf9a0f1c_9
-  - aws-c-mqtt=0.10.4=he4b61a0_19
-  - aws-c-s3=0.6.5=h915d0f8_2
+  - aws-c-mqtt=0.10.5=h3e3652f_0
+  - aws-c-s3=0.6.5=hf761692_5
   - aws-c-sdkutils=0.1.19=h8128ea2_3
-  - aws-checksums=0.1.18=h8128ea2_11
-  - aws-crt-cpp=0.28.2=h27d4fa7_4
-  - aws-sdk-cpp=1.11.379=h7a58a96_9
+  - aws-checksums=0.1.20=h8128ea2_0
+  - aws-crt-cpp=0.28.2=heb037f6_6
+  - aws-sdk-cpp=1.11.379=hd82b0e1_10
   - azure-core=1.31.0=pyhd8ed1ab_0
   - azure-core-cpp=1.13.0=hf8dbe3c_0
   - azure-datalake-store=0.0.51=pyh9f0ad1d_0
@@ -229,7 +229,7 @@ dependencies:
   - hvplot=0.10.0=pyhd8ed1ab_0
   - hyperframe=6.0.1=pyhd8ed1ab_0
   - icu=75.1=h120a0e1_0
-  - idna=3.9=pyhd8ed1ab_0
+  - idna=3.10=pyhd8ed1ab_0
   - imagecodecs=2024.6.1=py312h8902707_3
   - imageio=2.35.1=pyh12aca89_0
   - imagesize=1.4.1=pyhd8ed1ab_0
@@ -429,12 +429,12 @@ dependencies:
   - multipledispatch=0.6.0=pyhd8ed1ab_1
   - munkres=1.1.4=pyh9f0ad1d_0
   - mypy_extensions=1.0.0=pyha770c72_0
-  - mysql-common=8.3.0=h3829a10_5
-  - mysql-libs=8.3.0=h01befea_5
-  - mysqlclient=2.2.4=py312hede676d_1
+  - mysql-common=9.0.1=h3829a10_0
+  - mysql-libs=9.0.1=h01befea_0
+  - mysqlclient=2.2.4=py312h5861a67_3
   - myst-nb=1.1.1=pyhd8ed1ab_0
   - myst-parser=2.0.0=pyhd8ed1ab_0
-  - narwhals=1.8.0=pyhd8ed1ab_0
+  - narwhals=1.8.1=pyhd8ed1ab_0
   - nbclassic=1.1.0=pyhd8ed1ab_0
   - nbclient=0.7.4=pyhd8ed1ab_0
   - nbconvert=7.16.4=hd8ed1ab_1
@@ -580,7 +580,6 @@ dependencies:
   - s3fs=2024.9.0=pyhd8ed1ab_0
   - s3transfer=0.10.2=pyhd8ed1ab_0
   - samtools=1.21=h94387ee_0
-  - scikit-allel=1.3.11=py312h98e817e_0
   - scikit-image=0.24.0=py312h1171441_2
   - scikit-learn=1.5.2=py312h9d777eb_1
   - scipy=1.14.1=py312he82a568_0
@@ -634,7 +633,7 @@ dependencies:
   - sqlite=3.46.1=he26b093_0
   - stack_data=0.6.2=pyhd8ed1ab_0
   - starlette=0.38.5=pyhd8ed1ab_0
-  - statsmodels=0.14.2=py312h5dc8b90_0
+  - statsmodels=0.14.3=py312h3a11e2b_0
   - streamlit=1.38.0=pyhd8ed1ab_0
   - svgwrite=1.4.3=pyhd8ed1ab_0
   - svt-av1=2.2.1=hac325c4_0
@@ -673,7 +672,7 @@ dependencies:
   - uncertainties=3.2.2=pyhd8ed1ab_1
   - uri-template=1.3.0=pyhd8ed1ab_0
   - uriparser=0.9.8=h6aefe2f_0
-  - urllib3=2.2.2=pyhd8ed1ab_1
+  - urllib3=2.2.3=pyhd8ed1ab_0
   - uvicorn=0.30.6=py312hb401068_0
   - validators=0.34.0=pyhd8ed1ab_0
   - veracitools=0.1.3=py_0
@@ -721,7 +720,7 @@ dependencies:
       - ipinfo==5.1.1
       - lxml==5.3.0
       - lxml-html-clean==0.2.2
-      - malariagen-data==13.0.0
+      - malariagen-data==13.0.2
       - numpydoc-decorator==2.2.1
       - orjson==3.10.7
       - petlx==1.0.3
@@ -730,10 +729,11 @@ dependencies:
       - pyfaidx==0.8.1.2
       - python-gist==0.10.6
       - python-gnupg==0.4.9
+      - scikit-allel==1.3.12
       - scikits-bootstrap==1.1.0
       - sgkit==0.9.0
       - sh==2.0.7
       - termcolor==2.3.0
       - typeguard==4.3.0
       - yaspin==3.0.2
-prefix: /Users/runner/work/mgenv/mgenv/deps/conda/envs/mgenv-7464595
+prefix: /Users/runner/work/mgenv/mgenv/deps/conda/envs/mgenv-c194ddb
