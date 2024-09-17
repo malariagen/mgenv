@@ -1,3 +1,5 @@
+# downloads
+*.zip
 # emacs
 *~
 # installation directory
