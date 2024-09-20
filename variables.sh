@@ -19,7 +19,7 @@ if [[ -z "${MGENV_HOME}" ]]; then
     INSTALLDIR=${MGENVDIR}/deps
 else
     # allow user to specify installation location
-    INSTALLDIR=${MALARIAGEN_MGENV_HOME}
+    INSTALLDIR=${MGENV_HOME}
 fi
 
 # determine conda environment name, use name of parent directory
