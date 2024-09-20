@@ -1,7 +1,7 @@
 # not on conda-forge
 cached_property
 lxml_html_clean
-malariagen_data >=13.0.3
+malariagen_data >=13.0.4
 petlx
 pyfaidx
 python-gist
