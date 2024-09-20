@@ -3,7 +3,7 @@
 # Convenience script to install miniconda on a local system.
 
 # N.B., assume this will be executed from the root directory of a repo
-# where malariagen/binder is a submodule.
+# where malariagen/mgenv is a submodule.
 
 # ensure script errors if any command fails
 set -e
@@ -12,10 +12,10 @@ set -e
 # set -x
 
 # determine containing directory
-BINDERDIR="$( cd "$(dirname "${BASH_SOURCE[0]}")" && pwd -P )"
+MGENVDIR="$( cd "$(dirname "${BASH_SOURCE[0]}")" && pwd -P )"
 
 # setup environment variables
-source ${BINDERDIR}/variables.sh
+source ${MGENVDIR}/variables.sh
 
 # ensure installation directory exists
 mkdir -pv $INSTALLDIR
@@ -25,7 +25,7 @@ cd $INSTALLDIR
 
 # install miniconda
 if [ ! -f miniconda.installed ]; then
-    echo "[binder] installing miniconda to $INSTALLDIR"
+    echo "[mgenv] installing miniconda to $INSTALLDIR"
 
     # clean up any previous
     rm -rf conda
@@ -52,7 +52,7 @@ if [ ! -f miniconda.installed ]; then
     touch miniconda.installed
 
 else
-    echo "[binder] skipping miniconda installation"
+    echo "[mgenv] skipping miniconda installation"
 fi
 
 # return to original location
@@ -61,9 +61,9 @@ cd $REPODIR
 # set conda channel options
 CHANNEL_OPTS="--override-channels --channel conda-forge --channel bioconda --channel defaults"
 
-echo "[binder] installing packages"
+echo "[mgenv] installing packages"
 
-echo "[binder] install conda"
+echo "[mgenv] install conda"
 conda install $CHANNEL_OPTS --yes python=3.10 conda-libmamba-solver
 conda config --set solver libmamba
 python --version
@@ -76,12 +76,12 @@ else
     OS=ubuntu-latest
 fi
 
-ENVPINNED=${BINDERDIR}/environment-pinned-${OS}.yml
+ENVPINNED=${MGENVDIR}/environment-pinned-${OS}.yml
 
 if [ -f "$ENVPINNED" ]; then
     # Here we build the environment from the pinned definition file,
     # this is what we expect users to do.
-    echo "[binder] creating environment $CONDANAME from $ENVPINNED"
+    echo "[mgenv] creating environment $CONDANAME from $ENVPINNED"
     conda env create -v --yes --name $CONDANAME --file $ENVPINNED
 
 else
@@ -89,13 +89,13 @@ else
     # which is what a maintainer will do when they want to upgrade the pinned
     # definition files.
     conda env remove -v --name=$CONDANAME
-    echo "[binder] recreating $ENVPINNED"
-    echo "[binder] installing conda packages"
-    conda create --yes -v --strict-channel-priority $CHANNEL_OPTS --name $CONDANAME --file ${BINDERDIR}/requirements-conda.txt --file ${BINDERDIR}/requirements-compilers-${OS}.txt
-    echo "[binder] installing packages from pypi"
+    echo "[mgenv] recreating $ENVPINNED"
+    echo "[mgenv] installing conda packages"
+    conda create --yes -v --strict-channel-priority $CHANNEL_OPTS --name $CONDANAME --file ${MGENVDIR}/requirements-conda.txt --file ${MGENVDIR}/requirements-compilers-${OS}.txt
+    echo "[mgenv] installing packages from pypi"
     source activate $CONDANAME
-    pip install -v -r ${BINDERDIR}/requirements-pypi.txt
-    echo "[binder] exporting environment"
+    pip install -v -r ${MGENVDIR}/requirements-pypi.txt
+    echo "[mgenv] exporting environment"
     # N.B., here we add the conda-forge/label/broken channel so that the install
     # will still work in the future, even if some conda-forge packages have been
     # moved to the broken channel.

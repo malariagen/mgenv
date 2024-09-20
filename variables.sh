@@ -1,29 +1,29 @@
 #!/bin/bash
 
 # determine containing directory
-BINDERDIR="$( cd "$(dirname "${BASH_SOURCE[0]}")" && pwd -P )"
+MGENVDIR="$( cd "$(dirname "${BASH_SOURCE[0]}")" && pwd -P )"
 
 # determine path to parent repository
 REPODIR="$( cd "$(dirname "${BASH_SOURCE[0]}")" && cd .. && pwd -P )"
 
-# determine binder version
-BINDERV=$( cd ${BINDERDIR} && git tag --points-at HEAD )
-if [ -z "$BINDERV" ]; then
+# determine mgenv version
+MGENVV=$( cd ${MGENVDIR} && git tag --points-at HEAD )
+if [ -z "$MGENVV" ]; then
     # not on a tagged version, use commit hash
-    BINDERV=$( cd ${BINDERDIR} && git rev-parse --short HEAD )
+    MGENVV=$( cd ${MGENVDIR} && git rev-parse --short HEAD )
 fi
 
 # determine directory in which conda is installed
-if [[ -z "${MALARIAGEN_BINDER_HOME}" ]]; then
+if [[ -z "${MGENV_HOME}" ]]; then
     # if not specified by user, default installation location
-    INSTALLDIR=${BINDERDIR}/deps
+    INSTALLDIR=${MGENVDIR}/deps
 else
     # allow user to specify installation location
-    INSTALLDIR=${MALARIAGEN_BINDER_HOME}
+    INSTALLDIR=${MGENV_HOME}
 fi
 
 # determine conda environment name, use name of parent directory
-CONDANAME=${REPODIR##*/}-$BINDERV
+CONDANAME=${REPODIR##*/}-$MGENVV
 
 # add miniconda to the path
 export PATH=${INSTALLDIR}/conda/bin:$PATH
