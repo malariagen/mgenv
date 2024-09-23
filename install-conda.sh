@@ -64,7 +64,7 @@ CHANNEL_OPTS="--override-channels --channel conda-forge --channel bioconda --cha
 echo "[mgenv] installing packages"
 
 echo "[mgenv] install conda"
-conda install $CHANNEL_OPTS --yes python=3.10 conda-libmamba-solver
+conda install $CHANNEL_OPTS --yes conda-libmamba-solver
 conda config --set solver libmamba
 python --version
 conda --version
