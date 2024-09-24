@@ -1,4 +1,4 @@
-name: mgenv-a3e1611
+name: mgenv-24fa320
 channels:
   - conda-forge
   - bioconda
@@ -275,7 +275,7 @@ dependencies:
   - jupyter-resource-usage=0.7.1=pyhd8ed1ab_0
   - jupyter_client=7.4.9=pyhd8ed1ab_0
   - jupyter_console=6.6.3=pyhd8ed1ab_0
-  - jupyter_core=5.7.2=py312h7900ff3_0
+  - jupyter_core=5.7.2=pyh31011fe_1
   - jupyter_events=0.10.0=pyhd8ed1ab_0
   - jupyter_leaflet=0.19.2=pyhd8ed1ab_0
   - jupyter_server=2.14.2=pyhd8ed1ab_0
@@ -383,7 +383,7 @@ dependencies:
   - libpciaccess=0.18=hd590300_0
   - libpng=1.6.44=hadc24fc_0
   - libpq=16.4=h2d7952a_1
-  - libprotobuf=4.25.3=h08a7969_0
+  - libprotobuf=4.25.3=hd5b35b9_1
   - libre2-11=2023.09.01=h5a48ba9_2
   - librsvg=2.58.4=hc0ffecb_0
   - librttopo=1.1.0=hc670b87_16
@@ -564,7 +564,7 @@ dependencies:
   - python-graphviz=0.20.3=pyh717bed2_0
   - python-json-logger=2.0.7=pyhd8ed1ab_0
   - python-magic=0.4.27=py312h7900ff3_4
-  - python-tzdata=2024.1=pyhd8ed1ab_0
+  - python-tzdata=2024.2=pyhd8ed1ab_0
   - python_abi=3.12=5_cp312
   - pytorch=2.4.0=cpu_generic_py312h1576ffb_1
   - pytz=2024.1=pyhd8ed1ab_0
@@ -761,7 +761,7 @@ dependencies:
       - ipinfo==5.1.1
       - lxml==5.3.0
       - lxml-html-clean==0.2.2
-      - malariagen-data==13.2.0
+      - malariagen-data==13.2.1
       - numpydoc-decorator==2.2.1
       - orjson==3.10.7
       - petlx==1.0.3
@@ -777,4 +777,4 @@ dependencies:
       - termcolor==2.3.0
       - typeguard==4.3.0
       - yaspin==3.1.0
-prefix: /home/runner/work/mgenv/mgenv/deps/conda/envs/mgenv-a3e1611
+prefix: /home/runner/work/mgenv/mgenv/deps/conda/envs/mgenv-24fa320
