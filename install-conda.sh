@@ -79,29 +79,9 @@ fi
 ENVPINNED=${MGENVDIR}/environment-pinned-${OS}.yml
 
 if [ -f "$ENVPINNED" ]; then
-    # Here we build the environment from the pinned definition file,
-    # this is what we expect users to do.
-    echo "[mgenv] creating environment $CONDANAME from $ENVPINNED"
-    conda env create -v --yes --name $CONDANAME --file $ENVPINNED
+    echo "got pinned"
 
 else
-    # Here we rebuild the environment from the unpinned requirements files,
-    # which is what a maintainer will do when they want to upgrade the pinned
-    # definition files.
-    conda env remove -v --name=$CONDANAME
-    echo "[mgenv] recreating $ENVPINNED"
-    echo "[mgenv] installing conda packages"
-    conda create --yes -v --strict-channel-priority $CHANNEL_OPTS --name $CONDANAME --file ${MGENVDIR}/requirements-conda.txt --file ${MGENVDIR}/requirements-compilers-${OS}.txt
-    echo "[mgenv] installing packages from pypi"
-    source activate $CONDANAME
-    pip install -v -r ${MGENVDIR}/requirements-pypi.txt
-    echo "[mgenv] exporting environment"
-    # N.B., here we add the conda-forge/label/broken channel so that the install
-    # will still work in the future, even if some conda-forge packages have been
-    # moved to the broken channel.
-    conda env export -v $CHANNEL_OPTS --channel=conda-forge/label/broken --name=$CONDANAME > $ENVPINNED
-    echo "*** $ENVPINNED ***"
-    cat $ENVPINNED
-    echo "*** $ENVPINNED ***"
+    echo "not got pinned"
 
 fi
