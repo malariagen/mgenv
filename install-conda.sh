@@ -83,5 +83,9 @@ if [ -f "$ENVPINNED" ]; then
 
 else
     echo "not got pinned"
-
+    # Here we rebuild the environment from the unpinned requirements files,
+    # which is what a maintainer will do when they want to upgrade the pinned
+    # definition files.
+    echo "[mgenv] going to try removing $CONDANAME"
+    conda env remove -v --name=$CONDANAME
 fi
