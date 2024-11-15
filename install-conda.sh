@@ -87,5 +87,5 @@ else
     # which is what a maintainer will do when they want to upgrade the pinned
     # definition files.
     echo "[mgenv] going to try removing $CONDANAME"
-    conda env remove -v --name=$CONDANAME
+    conda env remove -v --name="$CONDANAME" || true
 fi
