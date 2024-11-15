@@ -88,7 +88,7 @@ else
     # Here we rebuild the environment from the unpinned requirements files,
     # which is what a maintainer will do when they want to upgrade the pinned
     # definition files.
-    conda env remove -v --name=$CONDANAME
+    conda env remove -v --name=$CONDANAME || true
     echo "[mgenv] recreating $ENVPINNED"
     echo "[mgenv] installing conda packages"
     conda create --yes -v --strict-channel-priority $CHANNEL_OPTS --name $CONDANAME --file ${MGENVDIR}/requirements-conda.txt --file ${MGENVDIR}/requirements-compilers-${OS}.txt
