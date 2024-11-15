@@ -59,7 +59,7 @@ fi
 cd $REPODIR
 
 # set conda channel options
-CHANNEL_OPTS="--override-channels --channel conda-forge --channel bioconda --channel defaults"
+CHANNEL_OPTS="--override-channels --channel conda-forge --channel bioconda"
 
 echo "[mgenv] installing packages"
 
