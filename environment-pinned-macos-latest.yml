@@ -1,4 +1,4 @@
-name: mgenv-5b0ff24
+name: mgenv-c59a8fb
 channels:
   - conda-forge
   - bioconda
@@ -10,11 +10,11 @@ dependencies:
   - affine=2.4.0=pyhd8ed1ab_0
   - aiobotocore=2.15.2=pyhd8ed1ab_0
   - aiohappyeyeballs=2.4.3=pyhd8ed1ab_0
-  - aiohttp=3.11.6=py312h3520af0_0
+  - aiohttp=3.11.8=py312h3520af0_0
   - aioitertools=0.12.0=pyhd8ed1ab_0
   - aiosignal=1.3.1=pyhd8ed1ab_0
   - alabaster=0.7.16=pyhd8ed1ab_0
-  - altair=5.4.1=pyhd8ed1ab_2
+  - altair=5.5.0=pyhd8ed1ab_0
   - amply=0.1.6=pyhd8ed1ab_0
   - annotated-types=0.7.0=pyhd8ed1ab_0
   - anyio=4.6.2.post1=pyhd8ed1ab_0
@@ -39,11 +39,11 @@ dependencies:
   - aws-c-http=0.9.1=h0c96e2d_2
   - aws-c-io=0.15.2=h789f5c1_2
   - aws-c-mqtt=0.11.0=h00ab244_8
-  - aws-c-s3=0.7.1=h704940e_3
+  - aws-c-s3=0.7.2=h704940e_0
   - aws-c-sdkutils=0.2.1=h1c3498a_1
   - aws-checksums=0.2.2=h1c3498a_1
-  - aws-crt-cpp=0.29.4=h44c5c52_1
-  - aws-sdk-cpp=1.11.449=h7bf9075_2
+  - aws-crt-cpp=0.29.6=hd535841_0
+  - aws-sdk-cpp=1.11.449=he3c0133_4
   - azure-core=1.32.0=pyhff2d567_0
   - azure-core-cpp=1.14.0=h9a36307_0
   - azure-datalake-store=0.0.51=pyh9f0ad1d_0
@@ -75,15 +75,15 @@ dependencies:
   - brotli-python=1.1.0=py312h5861a67_2
   - brunsli=0.1=h046ec9c_0
   - bzip2=1.0.8=hfdf4475_7
-  - c-ares=1.34.3=hf13058a_0
-  - c-blosc2=2.15.1=hb9356d3_0
+  - c-ares=1.34.3=hf13058a_1
+  - c-blosc2=2.15.2=h8e687fb_0
   - ca-certificates=2024.8.30=h8857fd0_0
   - cached-property=1.5.2=hd8ed1ab_1
   - cached_property=1.5.2=pyha770c72_1
   - cachetools=5.5.0=pyhd8ed1ab_0
   - cairo=1.18.0=h37bd5c4_3
   - cartopy=0.24.0=py312h98e817e_0
-  - cctools_osx-64=1010.6=hd0ff2cf_1
+  - cctools_osx-64=1010.6=hadbd6bd_2
   - certifi=2024.8.30=pyhd8ed1ab_0
   - cffi=1.17.1=py312hf857d28_0
   - cftime=1.6.4=py312h3a11e2b_1
@@ -100,7 +100,7 @@ dependencies:
   - click-plugins=1.1.1=py_0
   - cligj=0.7.2=pyhd8ed1ab_1
   - cloudpickle=3.1.0=pyhd8ed1ab_1
-  - coiled=1.63.0=pyhd8ed1ab_0
+  - coiled=1.65.0=pyhd8ed1ab_0
   - coin-or-cbc=2.10.12=h26cd4a2_1
   - coin-or-cgl=0.60.9=h5c63661_0
   - coin-or-clp=1.17.10=hf05e7e8_0
@@ -117,10 +117,10 @@ dependencies:
   - configargparse=1.7=pyhd8ed1ab_0
   - connection_pool=0.0.3=pyhd3deb0d_0
   - contourpy=1.3.1=py312hc47a885_0
-  - coverage=7.6.7=py312h3520af0_0
+  - coverage=7.6.8=py312h3520af0_0
   - cpython=3.12.7=py312hd8ed1ab_0
   - cramjam=2.8.4rc3=py312h45123d6_2
-  - cryptography=43.0.3=py312h83535b2_0
+  - cryptography=44.0.0=py312h0995e51_0
   - cycler=0.12.1=pyhd8ed1ab_0
   - cython=3.0.11=py312h6891801_3
   - cytoolz=1.0.0=py312hb553811_1
@@ -134,7 +134,7 @@ dependencies:
   - datashader=0.16.3=pyhd8ed1ab_0
   - datrie=0.8.2=py312hb553811_8
   - dav1d=1.2.1=h0dc2134_0
-  - debugpy=1.8.8=py312haafddd8_0
+  - debugpy=1.8.9=py312haafddd8_0
   - decorator=5.1.1=pyhd8ed1ab_0
   - defusedxml=0.7.1=pyhd8ed1ab_0
   - demes=0.2.3=pyhd8ed1ab_0
@@ -179,8 +179,8 @@ dependencies:
   - geopandas-base=1.0.1=pyha770c72_1
   - geos=3.13.0=hac325c4_0
   - geotiff=1.7.3=h2b6e260_3
-  - geoviews=1.13.0=hd8ed1ab_0
-  - geoviews-core=1.13.0=pyha770c72_0
+  - geoviews=1.13.1=hd8ed1ab_0
+  - geoviews-core=1.13.1=pyha770c72_0
   - gettext=0.22.5=hdfe23c8_3
   - gettext-tools=0.22.5=hdfe23c8_3
   - gflags=2.2.2=hac325c4_1005
@@ -214,13 +214,13 @@ dependencies:
   - h5py=3.12.1=nompi_py312hf7df0ef_102
   - harfbuzz=9.0.0=h098a298_1
   - hdf4=4.2.15=h8138101_7
-  - hdf5=1.14.3=nompi_h687a608_105
+  - hdf5=1.14.3=nompi_h1607680_106
   - hmmlearn=0.3.3=py312haafddd8_0
   - holoviews=1.20.0=pyhd8ed1ab_0
   - hpack=4.0.0=pyh9f0ad1d_0
   - htslib=1.21=hec81eee_0
   - httpcore=1.0.7=pyh29332c3_1
-  - httpx=0.27.2=pyhd8ed1ab_0
+  - httpx=0.28.0=pyhd8ed1ab_0
   - humanfriendly=10.0=pyhd81877a_7
   - humanize=4.11.0=pyhd8ed1ab_0
   - hvplot=0.11.1=pyhd8ed1ab_0
@@ -228,7 +228,7 @@ dependencies:
   - icu=75.1=h120a0e1_0
   - idna=3.10=pyhd8ed1ab_0
   - imagecodecs=2024.6.1=py312h2bbe148_4
-  - imageio=2.36.0=pyh12aca89_1
+  - imageio=2.36.1=pyh12aca89_1
   - imagesize=1.4.1=pyhd8ed1ab_0
   - immutables=0.21=py312hb553811_0
   - importlib-metadata=7.2.1=pyha770c72_0
@@ -244,7 +244,7 @@ dependencies:
   - ipykernel=6.29.5=pyh57ce528_0
   - ipyleaflet=0.19.2=pyhd8ed1ab_0
   - ipympl=0.9.4=pyhd8ed1ab_0
-  - ipython=8.29.0=pyh707e725_0
+  - ipython=8.30.0=pyh707e725_0
   - ipython_genutils=0.2.0=pyhd8ed1ab_1
   - ipytree=0.2.2=pyhd8ed1ab_0
   - ipywidgets=7.6.5=pyhd8ed1ab_0
@@ -259,7 +259,7 @@ dependencies:
   - jmespath=1.0.1=pyhd8ed1ab_0
   - joblib=1.4.2=pyhd8ed1ab_0
   - json-c=0.18=hc62ec3d_0
-  - json5=0.9.28=pyhff2d567_0
+  - json5=0.10.0=pyhd8ed1ab_0
   - jsondiff=2.0.0=pyhd8ed1ab_0
   - jsonpointer=3.0.0=py312hb401068_1
   - jsonschema=4.23.0=pyhd8ed1ab_0
@@ -293,15 +293,15 @@ dependencies:
   - lazy-loader=0.4=pyhd8ed1ab_1
   - lazy_loader=0.4=pyhd8ed1ab_1
   - lcms2=2.16=ha2f27b4_0
-  - ld64_osx-64=951.9=h3c7722d_1
+  - ld64_osx-64=951.9=h9d2de3d_2
   - lerc=4.0.0=hb486fe8_0
   - libabseil=20240722.0=cxx17_hac325c4_1
   - libaec=1.1.3=h73e2aa4_0
-  - libarchive=3.7.4=h20e244c_0
-  - libarrow=18.0.0=hd4c0275_7_cpu
-  - libarrow-acero=18.0.0=h240833e_7_cpu
-  - libarrow-dataset=18.0.0=h240833e_7_cpu
-  - libarrow-substrait=18.0.0=h5c0c8cd_7_cpu
+  - libarchive=3.7.7=h7988bea_0
+  - libarrow=18.1.0=h9cd44c2_1_cpu
+  - libarrow-acero=18.1.0=h8bbd7dd_1_cpu
+  - libarrow-dataset=18.1.0=h8bbd7dd_1_cpu
+  - libarrow-substrait=18.1.0=h3d48b7c_1_cpu
   - libasprintf=0.22.5=hdfe23c8_3
   - libasprintf-devel=0.22.5=hdfe23c8_3
   - libavif16=1.1.1=h71406da_2
@@ -321,7 +321,10 @@ dependencies:
   - libevent=2.1.12=ha90c15b_1
   - libexpat=2.6.4=h240833e_0
   - libffi=3.4.2=h0d85af4_5
-  - libgcrypt=1.11.0=hfdf4475_1
+  - libgcrypt=1.11.0=h694c41f_2
+  - libgcrypt-devel=1.11.0=h6e16a3a_2
+  - libgcrypt-lib=1.11.0=h6e16a3a_2
+  - libgcrypt-tools=1.11.0=h6e16a3a_2
   - libgd=2.3.3=h2e77e4f_10
   - libgdal-core=3.9.2=ha8eff54_6
   - libgettextpo=0.22.5=hdfe23c8_3
@@ -341,17 +344,17 @@ dependencies:
   - libintl=0.22.5=hdfe23c8_3
   - libintl-devel=0.22.5=hdfe23c8_3
   - libjpeg-turbo=3.0.0=h0dc2134_1
-  - libjxl=0.11.0=haf62dd7_2
+  - libjxl=0.11.1=ha9171ad_0
   - libkml=1.3.0=h9ee1731_1021
   - liblapack=3.9.0=25_osx64_openblas
   - liblapacke=3.9.0=25_osx64_openblas
   - libllvm14=14.0.6=hc8e404f_4
-  - libllvm19=19.1.4=hc29ff6c_0
+  - libllvm19=19.1.4=hc29ff6c_1
   - libmagic=5.36=h0b31af3_2
   - libnetcdf=4.9.2=nompi_h7334405_114
   - libnghttp2=1.64.0=hc7306c3_0
   - libopenblas=0.3.28=openmp_hbf64a52_1
-  - libparquet=18.0.0=hc957f30_7_cpu
+  - libparquet=18.1.0=h19ef8e7_1_cpu
   - libpng=1.6.44=h4b8f8c9_0
   - libprotobuf=5.28.2=h8b30cf6_0
   - libre2-11=2024.07.02=hd530cb8_1
@@ -362,11 +365,11 @@ dependencies:
   - libspatialindex=2.0.0=hf036a51_0
   - libspatialite=5.1.0=hc43c327_11
   - libsqlite=3.47.0=h2f8c449_1
-  - libssh2=1.11.0=hd019ec5_0
+  - libssh2=1.11.1=h3dc7d44_0
   - libthrift=0.21.0=h75589b3_0
   - libtiff=4.7.0=h5f227bf_0
-  - libtorch=2.5.1=cpu_mkl_h1922c03_103
-  - libutf8proc=2.8.0=hb7f2c08_0
+  - libtorch=2.5.1=cpu_mkl_hcd5f73a_104
+  - libutf8proc=2.8.0=he670073_1
   - libuv=1.49.2=hd79239c_0
   - libwebp-base=1.4.0=h10d778d_0
   - libxcb=1.17.0=hf1f96e2_0
@@ -376,8 +379,8 @@ dependencies:
   - libzopfli=1.0.3=h046ec9c_0
   - linkify-it-py=2.0.3=pyhd8ed1ab_0
   - llvm-openmp=19.1.4=ha54dae1_0
-  - llvm-tools=19.1.4=h3fe3016_0
-  - llvm-tools-19=19.1.4=he90a8e3_0
+  - llvm-tools=19.1.4=h3fe3016_1
+  - llvm-tools-19=19.1.4=he90a8e3_1
   - llvmlite=0.43.0=py312hcc8fd36_1
   - lmfit=1.3.2=pyhd8ed1ab_0
   - locket=1.0.0=pyhd8ed1ab_0
@@ -415,9 +418,9 @@ dependencies:
   - mysqlclient=2.2.6=py312haafddd8_0
   - myst-nb=1.1.2=pyhd8ed1ab_0
   - myst-parser=2.0.0=pyhd8ed1ab_0
-  - narwhals=1.14.1=pyhff2d567_0
+  - narwhals=1.14.3=pyhd8ed1ab_0
   - nbclassic=1.1.0=pyhd8ed1ab_0
-  - nbclient=0.10.0=pyhd8ed1ab_0
+  - nbclient=0.10.1=pyhd8ed1ab_0
   - nbconvert=7.16.4=hd8ed1ab_1
   - nbconvert-core=7.16.4=pyhd8ed1ab_1
   - nbconvert-pandoc=7.16.4=hd8ed1ab_1
@@ -433,8 +436,8 @@ dependencies:
   - notebook=6.5.7=pyha770c72_0
   - notebook-shim=0.2.4=pyhd8ed1ab_0
   - numba=0.60.0=py312hc3b515d_0
-  - numcodecs=0.14.0=py312hec45ffd_0
-  - numexpr=2.10.1=py312h6b48bed_3
+  - numcodecs=0.14.1=py312hec45ffd_0
+  - numexpr=2.10.2=py312ha51eba0_0
   - numpy=1.26.4=py312he3a82b2_0
   - oauthlib=3.2.2=pyhd8ed1ab_0
   - openblas=0.3.28=openmp_h30af337_1
@@ -488,8 +491,8 @@ dependencies:
   - pure_eval=0.2.3=pyhd8ed1ab_0
   - py-cpuinfo=9.0.0=pyhd8ed1ab_0
   - py2vega=0.6.1=pyhd8ed1ab_0
-  - pyarrow=18.0.0=py312hb401068_1
-  - pyarrow-core=18.0.0=py312h5157fe3_1_cpu
+  - pyarrow=18.1.0=py312hb401068_0
+  - pyarrow-core=18.1.0=py312h5157fe3_0_cpu
   - pyasn1=0.6.1=pyhd8ed1ab_1
   - pyasn1-modules=0.4.1=pyhd8ed1ab_0
   - pybtex=0.24.0=pyhd8ed1ab_2
@@ -499,20 +502,20 @@ dependencies:
   - pycountry=24.6.1=pyhd8ed1ab_0
   - pycparser=2.22=pyhd8ed1ab_0
   - pyct=0.5.0=pyhd8ed1ab_0
-  - pydantic=2.9.2=pyhd8ed1ab_0
-  - pydantic-core=2.23.4=py312h669792a_0
+  - pydantic=2.10.2=pyh3cfb1c2_0
+  - pydantic-core=2.27.1=py312h0d0de52_0
   - pydata-sphinx-theme=0.16.0=pyhd8ed1ab_0
   - pydeck=0.8.0=pyhd8ed1ab_0
   - pyflakes=3.2.0=pyhd8ed1ab_0
   - pygments=2.18.0=pyhd8ed1ab_0
   - pygobject=3.50.0=py312h30111ac_1
-  - pyjwt=2.10.0=pyhff2d567_0
+  - pyjwt=2.10.1=pyhd8ed1ab_0
   - pynacl=1.5.0=py312hb553811_4
   - pynndescent=0.5.13=pyhff2d567_0
   - pyobjc-core=10.3.1=py312hab44e94_1
   - pyobjc-framework-cocoa=10.3.1=py312hab44e94_1
   - pyogrio=0.10.0=py312h8f0a83f_0
-  - pyopenssl=24.2.1=pyhd8ed1ab_2
+  - pyopenssl=21.0.0=pyhd8ed1ab_0
   - pyparsing=3.2.0=pyhd8ed1ab_1
   - pyproj=3.7.0=py312h9673cc4_0
   - pyprojroot=0.3.0=pyhd8ed1ab_0
@@ -523,13 +526,13 @@ dependencies:
   - pytest-cov=6.0.0=pyhd8ed1ab_0
   - python=3.12.7=h8f8b54e_0_cpython
   - python-dateutil=2.9.0.post0=pyhff2d567_0
-  - python-fastjsonschema=2.20.0=pyhd8ed1ab_0
+  - python-fastjsonschema=2.21.0=pyhd8ed1ab_0
   - python-graphviz=0.20.3=pyhe28f650_1
   - python-json-logger=2.0.7=pyhd8ed1ab_0
-  - python-magic=0.4.27=py312hb401068_4
+  - python-magic=0.4.27=pyh9ac5cc3_5
   - python-tzdata=2024.2=pyhd8ed1ab_0
   - python_abi=3.12=5_cp312
-  - pytorch=2.5.1=cpu_mkl_py312hf110c06_103
+  - pytorch=2.5.1=cpu_mkl_py312hbfd738c_104
   - pytz=2024.1=pyhd8ed1ab_0
   - pyu2f=0.1.5=pyhd8ed1ab_0
   - pyviz_comms=2.3.2=pyhd8ed1ab_0
@@ -565,7 +568,7 @@ dependencies:
   - seaborn=0.13.2=hd8ed1ab_2
   - seaborn-base=0.13.2=pyhd8ed1ab_2
   - send2trash=1.8.3=pyh31c8845_0
-  - setuptools=75.5.0=pyhff2d567_0
+  - setuptools=75.6.0=pyhff2d567_1
   - setuptools-scm=8.1.0=pyhd8ed1ab_0
   - shapely=2.0.6=py312h4ff98d2_2
   - shellingham=1.5.4=pyhd8ed1ab_0
@@ -576,12 +579,12 @@ dependencies:
   - sleef=3.7=hfe0d17b_2
   - smart_open=7.0.5=pyhd8ed1ab_1
   - smmap=5.0.0=pyhd8ed1ab_0
-  - snakemake=8.25.3=hdfd78af_0
+  - snakemake=8.25.4=hdfd78af_0
   - snakemake-interface-common=1.17.4=pyhdfd78af_0
   - snakemake-interface-executor-plugins=9.3.2=pyhdfd78af_0
   - snakemake-interface-report-plugins=1.1.0=pyhdfd78af_0
   - snakemake-interface-storage-plugins=3.3.0=pyhdfd78af_0
-  - snakemake-minimal=8.25.3=pyhdfd78af_0
+  - snakemake-minimal=8.25.4=pyhdfd78af_0
   - snappy=1.2.1=he1e6707_0
   - sniffio=1.3.1=pyhd8ed1ab_0
   - snowballstemmer=2.2.0=pyhd8ed1ab_0
@@ -613,7 +616,7 @@ dependencies:
   - stack_data=0.6.2=pyhd8ed1ab_0
   - starlette=0.41.3=pyh7900ff3_0
   - statsmodels=0.14.4=py312h3a11e2b_0
-  - streamlit=1.40.1=pyhd8ed1ab_0
+  - streamlit=1.40.2=pyhd8ed1ab_0
   - svgwrite=1.4.3=pyhd8ed1ab_0
   - svt-av1=2.3.0=h97d8b74_0
   - sympy=1.13.3=pyh2585a3b_104
@@ -631,14 +634,14 @@ dependencies:
   - toml=0.10.2=pyhd8ed1ab_0
   - tomli=2.1.0=pyhff2d567_0
   - toolz=1.0.0=pyhd8ed1ab_0
-  - tornado=6.4.1=py312hb553811_1
-  - tqdm=4.67.0=pyhd8ed1ab_0
+  - tornado=6.4.2=py312h01d7ebd_0
+  - tqdm=4.67.1=pyhd8ed1ab_0
   - traitlets=5.14.3=pyhd8ed1ab_0
   - traittypes=0.2.1=pyh9f0ad1d_2
   - tskit=0.6.0=py312h59f7578_0
-  - typer=0.13.1=pyhd8ed1ab_0
-  - typer-slim=0.13.1=pyhff2d567_0
-  - typer-slim-standard=0.13.1=hd8ed1ab_0
+  - typer=0.14.0=pyhd8ed1ab_0
+  - typer-slim=0.14.0=pyhd8ed1ab_0
+  - typer-slim-standard=0.14.0=hd8ed1ab_0
   - types-python-dateutil=2.9.0.20241003=pyhff2d567_0
   - typing-extensions=4.12.2=hd8ed1ab_0
   - typing_extensions=4.12.2=pyha770c72_0
@@ -653,21 +656,21 @@ dependencies:
   - uri-template=1.3.0=pyhd8ed1ab_0
   - uriparser=0.9.8=h6aefe2f_0
   - urllib3=2.2.3=pyhd8ed1ab_0
-  - uvicorn=0.32.0=pyh31011fe_1
+  - uvicorn=0.32.1=pyh31011fe_0
   - validators=0.34.0=pyhd8ed1ab_0
   - veracitools=0.1.3=py_0
   - voila=0.5.8=pyhd8ed1ab_1
   - voila-gridstack=0.4.0=pyhd8ed1ab_0
   - watchdog=6.0.0=py312h01d7ebd_0
-  - watchfiles=0.24.0=py312h669792a_1
+  - watchfiles=1.0.0=py312h0d0de52_0
   - wcwidth=0.2.13=pyhd8ed1ab_0
   - webcolors=24.8.0=pyhd8ed1ab_0
   - webencodings=0.5.1=pyhd8ed1ab_2
   - websocket-client=1.8.0=pyhd8ed1ab_0
   - websockets=14.1=py312h01d7ebd_0
-  - wheel=0.45.0=pyhd8ed1ab_0
+  - wheel=0.45.1=pyhd8ed1ab_0
   - widgetsnbextension=3.5.1=pyh9f0ad1d_3
-  - wrapt=1.16.0=py312hb553811_1
+  - wrapt=1.17.0=py312h01d7ebd_0
   - xarray=2024.7.0=pyhd8ed1ab_0
   - xerces-c=3.2.5=h197e74d_2
   - xlrd=2.0.1=pyhd8ed1ab_3
@@ -677,13 +680,13 @@ dependencies:
   - xyzservices=2024.9.0=pyhd8ed1ab_0
   - xz=5.2.6=h775f41a_0
   - yaml=0.2.5=h0d85af4_2
-  - yarl=1.17.2=py312h01d7ebd_0
+  - yarl=1.18.0=py312h01d7ebd_0
   - yte=1.5.4=pyha770c72_0
   - zarr=2.15.0=pyhd8ed1ab_1
   - zeromq=4.3.5=h7130eaa_7
   - zfp=1.0.1=h469392a_2
   - zict=3.0.0=pyhd8ed1ab_0
-  - zipp=3.21.0=pyhd8ed1ab_0
+  - zipp=3.21.0=pyhd8ed1ab_1
   - zlib=1.3.1=hd23fc13_2
   - zlib-ng=2.2.2=hac325c4_0
   - zstandard=0.23.0=py312h7122b0e_1
@@ -699,9 +702,9 @@ dependencies:
       - ipinfo==5.1.1
       - lxml==5.3.0
       - lxml-html-clean==0.4.1
-      - malariagen-data==13.5.0
+      - malariagen-data==14.0.0
       - numpydoc-decorator==2.2.1
-      - orjson==3.10.11
+      - orjson==3.10.12
       - petlx==1.0.3
       - protopunica==0.14.8.post2
       - pyerf==1.0.1
@@ -716,4 +719,4 @@ dependencies:
       - typeguard==4.4.1
       - werkzeug==3.0.6
       - yaspin==3.1.0
-prefix: /Users/runner/work/mgenv/mgenv/deps/conda/envs/mgenv-5b0ff24
+prefix: /Users/runner/work/mgenv/mgenv/deps/conda/envs/mgenv-c59a8fb
