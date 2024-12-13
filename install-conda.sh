@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-# Convenience script to install miniconda on a local system.
+# Convenience script to install miniforge on a local system.
 
 # N.B., assume this will be executed from the root directory of a repo
 # where malariagen/mgenv is a submodule.
@@ -23,36 +23,42 @@ mkdir -pv $INSTALLDIR
 # change into into installation directory
 cd $INSTALLDIR
 
-# install miniconda
-if [ ! -f miniconda.installed ]; then
-    echo "[mgenv] installing miniconda to $INSTALLDIR"
+# install miniforge
+if [ ! -f miniforge.installed ]; then
+    echo "[mgenv] installing miniforge to $INSTALLDIR"
 
     # clean up any previous
-    rm -rf conda
+    rm -rf ${HOME}/conda
 
     if [ "$(uname)" == "Darwin" ]; then
         # Install for Mac OS X platform
-        # download miniconda
-        curl --continue-at - --remote-name https://repo.anaconda.com/miniconda/Miniconda3-latest-MacOSX-x86_64.sh
+        # download miniforge
+        curl -fsSLo Miniforge3.sh "https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-MacOSX-$(uname -m).sh"
 
-        # install miniconda
-        bash Miniconda3-latest-MacOSX-x86_64.sh -b -p conda
+        # install miniforge
+        bash Miniforge3.sh -b -p "${HOME}/conda"
 
     elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
         # Install for GNU/Linux platform
-        # download miniconda
-        wget --no-clobber https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
+        # download miniforge
+        wget -O Miniforge3.sh "https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-$(uname)-$(uname -m).sh"
 
-        # install miniconda
-        bash Miniconda3-latest-Linux-x86_64.sh -b -p conda
+        # install miniforge
+        bash Miniforge3.sh -b -p "${HOME}/conda"
 
     fi
 
+    # activate conda
+    source "${HOME}/conda/etc/profile.d/conda.sh"
+    
+    # For mamba support also run the following command
+    # source "${HOME}/conda/etc/profile.d/mamba.sh"
+
     # mark success
-    touch miniconda.installed
+    touch miniforge.installed
 
 else
-    echo "[mgenv] skipping miniconda installation"
+    echo "[mgenv] skipping miniforge installation"
 fi
 
 # return to original location
@@ -64,6 +70,7 @@ CHANNEL_OPTS="--override-channels --channel conda-forge --channel bioconda"
 echo "[mgenv] installing packages"
 
 echo "[mgenv] install conda"
+conda activate
 conda install $CHANNEL_OPTS --yes conda-libmamba-solver
 conda config --set solver libmamba
 python --version
