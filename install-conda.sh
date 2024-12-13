@@ -28,29 +28,31 @@ if [ ! -f miniforge.installed ]; then
     echo "[mgenv] installing miniforge to $INSTALLDIR"
 
     # clean up any previous
-    rm -rf conda
+    rm -rf ${HOME}/conda
 
     if [ "$(uname)" == "Darwin" ]; then
         # Install for Mac OS X platform
         # download miniforge
-        curl --continue-at - --remote-name https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-MacOSX-x86_64.sh
+        curl -fsSLo Miniforge3.sh "https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-MacOSX-$(uname -m).sh"
 
         # install miniforge
-        bash Miniforge3-MacOSX-x86_64.sh -b -p conda
+        bash Miniforge3.sh -b -p "${HOME}/conda"
 
     elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
         # Install for GNU/Linux platform
         # download miniforge
-        wget --no-clobber https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-Linux-x86_64.sh
+        wget -O Miniforge3.sh "https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-$(uname)-$(uname -m).sh"
 
         # install miniforge
-        bash Miniforge3-Linux-x86_64.sh -b -p conda
+        bash Miniforge3.sh -b -p "${HOME}/conda"
 
     fi
 
-    # include conda on the PATH
-    export PATH="$INSTALLDIR/conda/bin:$PATH"
-    echo $PATH
+    # activate conda
+    source "${HOME}/conda/etc/profile.d/conda.sh"
+    
+    # For mamba support also run the following command
+    # source "${HOME}/conda/etc/profile.d/mamba.sh"
 
     # mark success
     touch miniforge.installed
