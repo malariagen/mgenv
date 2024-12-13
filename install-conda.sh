@@ -49,11 +49,11 @@ if [ ! -f miniforge.installed ]; then
     fi
 
     # include conda on the PATH
-    export PATH="$INSTALLDIR/conda/bin:$PATH"
-    echo "export PATH=\"$INSTALLDIR/conda/bin:\$PATH\"" >> ~/.bashrc
+    export PATH="$MGENVDIR/$INSTALLDIR/conda/bin:$PATH"
+    echo "export PATH=\"$MGENVDIR/$INSTALLDIR/conda/bin:\$PATH\"" >> ~/.bashrc
 
     # initialize conda
-    source "$INSTALLDIR/conda/etc/profile.d/conda.sh"
+    source "$MGENVDIR/$INSTALLDIR/conda/etc/profile.d/conda.sh"
 
     # mark success
     touch miniforge.installed
