@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-# Convenience script to install miniconda on a local system.
+# Convenience script to install miniforge on a local system.
 
 # N.B., assume this will be executed from the root directory of a repo
 # where malariagen/mgenv is a submodule.
@@ -23,36 +23,36 @@ mkdir -pv $INSTALLDIR
 # change into into installation directory
 cd $INSTALLDIR
 
-# install miniconda
-if [ ! -f miniconda.installed ]; then
-    echo "[mgenv] installing miniconda to $INSTALLDIR"
+# install miniforge
+if [ ! -f miniforge.installed ]; then
+    echo "[mgenv] installing miniforge to $INSTALLDIR"
 
     # clean up any previous
     rm -rf conda
 
     if [ "$(uname)" == "Darwin" ]; then
         # Install for Mac OS X platform
-        # download miniconda
-        curl --continue-at - --remote-name https://repo.anaconda.com/miniconda/Miniconda3-latest-MacOSX-x86_64.sh
+        # download miniforge
+        curl --continue-at - --remote-name https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-MacOSX-x86_64.sh
 
-        # install miniconda
-        bash Miniconda3-latest-MacOSX-x86_64.sh -b -p conda
+        # install miniforge
+        bash Miniforge3-MacOSX-x86_64.sh -b -p conda
 
     elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
         # Install for GNU/Linux platform
-        # download miniconda
-        wget --no-clobber https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
+        # download miniforge
+        wget --no-clobber https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-Linux-x86_64.sh
 
-        # install miniconda
-        bash Miniconda3-latest-Linux-x86_64.sh -b -p conda
+        # install miniforge
+        bash Miniforge3-Linux-x86_64.sh -b -p conda
 
     fi
 
     # mark success
-    touch miniconda.installed
+    touch miniforge.installed
 
 else
-    echo "[mgenv] skipping miniconda installation"
+    echo "[mgenv] skipping miniforge installation"
 fi
 
 # return to original location
