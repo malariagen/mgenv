@@ -69,6 +69,8 @@ matplotlib-venn
 msgpack-python
 msprime
 mysqlclient
+mysql-common ==8.4.*
+mysql-libs ==8.4.*
 nbconvert
 nbserverproxy
 nbval
