@@ -68,9 +68,6 @@ cd $REPODIR
 echo "[mgenv] activating conda"
 source "$INSTALLDIR/conda/etc/profile.d/conda.sh"
 
-# For mamba support also run the following command
-# source "conda/etc/profile.d/mamba.sh"
-
 # set conda channel options
 CHANNEL_OPTS="--override-channels --channel conda-forge --channel bioconda"
 
