@@ -25,7 +25,7 @@ fi
 # determine conda environment name, use name of parent directory
 CONDANAME=${REPODIR##*/}-$MGENVV
 
-# add miniconda to the path
+# add conda to the path
 export PATH=${INSTALLDIR}/conda/bin:$PATH
 
 # use a frozen mirror to get reproducible install
