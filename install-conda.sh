@@ -71,10 +71,6 @@ source "$INSTALLDIR/conda/etc/profile.d/conda.sh"
 # set conda channel options
 CHANNEL_OPTS="--override-channels --channel conda-forge --channel bioconda"
 
-echo "[mgenv] installing conda-libmamba-solver"
-conda install $CHANNEL_OPTS --yes conda-libmamba-solver
-conda config --set solver libmamba
-
 echo "[mgenv] showing pything version, conda version, conda list conda-libmamba-solver"
 python --version
 conda --version

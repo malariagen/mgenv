@@ -29,6 +29,7 @@ gdal
 geopandas
 geoviews
 google-cloud-sdk
+google-crc32c
 graphviz
 h5py
 hmmlearn
@@ -104,6 +105,7 @@ python-graphviz
 pyviz_comms
 rasterio
 rioxarray
+rsync
 rtree
 samtools
 s3cmd
