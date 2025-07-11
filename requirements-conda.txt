@@ -108,7 +108,7 @@ rioxarray
 rsync
 rtree
 samtools
-s3cmd
+s3cmd >=2.4.0
 s3fs
 scikit-image
 scikit-learn
