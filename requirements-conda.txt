@@ -21,6 +21,7 @@ distributed
 dask-ml
 fastcluster
 fastparquet
+fiona
 flake8
 fsspec
 fusepy
