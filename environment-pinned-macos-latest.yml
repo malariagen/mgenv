@@ -1,4 +1,4 @@
-name: mgenv-59f12a0
+name: mgenv-e82ac9c
 channels:
   - conda-forge
   - bioconda
@@ -30,19 +30,19 @@ dependencies:
   - asttokens=3.0.0=pyhd8ed1ab_1
   - atk-1.0=2.38.0=hd03087b_2
   - attrs=25.3.0=pyh71513ae_0
-  - aws-c-auth=0.9.0=hb5b73c5_15
-  - aws-c-cal=0.9.2=h03444cf_0
-  - aws-c-common=0.12.3=h5505292_0
-  - aws-c-compression=0.3.1=hca07070_5
-  - aws-c-event-stream=0.5.5=h40449bf_0
-  - aws-c-http=0.10.2=hb5bd760_2
-  - aws-c-io=0.20.1=hf355ecc_1
-  - aws-c-mqtt=0.13.1=h923d298_3
-  - aws-c-s3=0.8.3=h78ecdd8_0
-  - aws-c-sdkutils=0.2.4=hca07070_0
-  - aws-checksums=0.2.7=hca07070_1
-  - aws-crt-cpp=0.32.10=h19250b4_2
-  - aws-sdk-cpp=1.11.510=h3a747ed_13
+  - aws-c-auth=0.9.0=hed7f23c_16
+  - aws-c-cal=0.9.2=hd08b81e_1
+  - aws-c-common=0.12.4=h6caf38d_0
+  - aws-c-compression=0.3.1=habbe1e8_6
+  - aws-c-event-stream=0.5.5=ha7b4b11_1
+  - aws-c-http=0.10.2=hf8ac5b2_3
+  - aws-c-io=0.21.0=hc6344be_1
+  - aws-c-mqtt=0.13.1=h8af1df2_4
+  - aws-c-s3=0.8.3=hf857400_1
+  - aws-c-sdkutils=0.2.4=habbe1e8_1
+  - aws-checksums=0.2.7=habbe1e8_2
+  - aws-crt-cpp=0.32.10=hcb36028_3
+  - aws-sdk-cpp=1.11.510=h29a0155_14
   - azure-core=1.35.0=pyhd8ed1ab_0
   - azure-core-cpp=1.14.0=hd50102c_0
   - azure-datalake-store=0.0.53=pyhe01879c_1
@@ -148,6 +148,7 @@ dependencies:
   - fastcluster=1.3.0=np20py312h4049357_0
   - fastparquet=2024.11.0=py312he0011b7_0
   - filelock=3.18.0=pyhd8ed1ab_0
+  - fiona=1.10.1=py312hfd5e53c_3
   - flake8=7.3.0=pyhd8ed1ab_0
   - folium=0.20.0=pyhd8ed1ab_0
   - font-ttf-dejavu-sans-mono=2.37=hab24e00_0
@@ -384,7 +385,7 @@ dependencies:
   - lz4=4.4.4=py312hf263c89_0
   - lz4-c=1.10.0=h286801f_1
   - lzo=2.10=h93a5062_1001
-  - mapclassify=2.9.0=pyhd8ed1ab_0
+  - mapclassify=2.10.0=pyhd8ed1ab_1
   - markdown=3.8.2=pyhd8ed1ab_0
   - markdown-it-py=3.0.0=pyhd8ed1ab_1
   - markupsafe=3.0.2=py312h998013c_1
@@ -427,7 +428,7 @@ dependencies:
   - netcdf4=1.7.2=nompi_py312haae1a11_101
   - networkx=3.5=pyhe01879c_0
   - nlohmann_json=3.12.0=ha1acc90_0
-  - nodejs=24.3.0=hab9d20b_1
+  - nodejs=24.4.0=hab9d20b_0
   - nomkl=1.0=h5ca1d4c_0
   - nose=1.3.7=py_1006
   - notebook=6.5.7=pyha770c72_0
@@ -446,7 +447,7 @@ dependencies:
   - pandas=2.3.1=py312h98f7732_0
   - pandoc=3.7.0.2=hce30654_0
   - pandocfilters=1.5.0=pyhd8ed1ab_0
-  - panel=1.7.3=pyhd8ed1ab_0
+  - panel=1.7.4=pyhd8ed1ab_0
   - pango=1.56.3=h5fd7515_1
   - param=2.2.1=pyhd8ed1ab_0
   - paramiko=3.5.1=pyhd8ed1ab_0
@@ -493,8 +494,8 @@ dependencies:
   - pyarrow-core=20.0.0=py312hc40f475_0_cpu
   - pyasn1=0.6.1=pyhd8ed1ab_2
   - pyasn1-modules=0.4.2=pyhd8ed1ab_0
-  - pybind11=2.13.6=pyhc790b64_3
-  - pybind11-global=2.13.6=pyh217bc35_3
+  - pybind11=3.0.0=pyh49e36cd_0
+  - pybind11-global=3.0.0=pyh571d8c1_0
   - pybtex=0.25.1=pyhd8ed1ab_0
   - pybtex-docutils=1.0.3=py312h81bd7bf_2
   - pycairo=1.28.0=py312h0437987_0
@@ -730,4 +731,4 @@ dependencies:
       - xarray==2025.3.0
       - yaspin==3.1.0
       - zarr==2.18.7
-prefix: /Users/runner/work/mgenv/mgenv/deps/conda/envs/mgenv-59f12a0
+prefix: /Users/runner/work/mgenv/mgenv/deps/conda/envs/mgenv-e82ac9c
