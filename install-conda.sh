@@ -78,7 +78,18 @@ conda list conda-libmamba-solver
 
 echo "[mgenv] determining OS"
 if [ "$(uname)" == "Darwin" ]; then
-    OS=macos-latest
+
+    echo "[mgenv] determining macOS architecture"
+    archi_name="$(uname -m)"
+
+    if [[ "$archi_name" == "x86_64" ]]; then
+        OS=macos-13
+    elif [[ "$archi_name" == "arm64" ]]; then
+        OS=macos-latest
+    else
+        OS=macos-unknown
+    fi
+
 else
     OS=ubuntu-latest
 fi
