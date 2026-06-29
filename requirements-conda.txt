@@ -4,7 +4,7 @@ bcftools >=1.16
 black
 blas =*=openblas
 biopython
-bokeh >=3.1.0
+bokeh
 bqplot
 cartopy
 click
@@ -83,7 +83,7 @@ notebook
 numba
 numcodecs
 numexpr
-numpy
+numpy <2.1.0
 openpyxl
 pandas
 panel
