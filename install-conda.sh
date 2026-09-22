@@ -47,7 +47,7 @@ if [ ! -f miniforge.installed ]; then
         # Install for GNU/Linux platform
         # download miniforge
         # https://github.com/conda-forge/miniforge/blob/main/README.md
-        wget -O Miniforge3.sh "https://github.com/conda-forge/miniforge/releases/download/26.3.2-3/Miniforge3-$(uname)-$(uname -m).sh"
+        wget -O Miniforge3.sh "https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-$(uname)-$(uname -m).sh"
 
         # install miniforge
         bash Miniforge3.sh -b -p "conda"
