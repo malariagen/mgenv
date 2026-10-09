@@ -760,7 +760,7 @@ dependencies:
       - numcodecs==0.15.1
       - numpydoc-decorator==2.2.1
       - orjson==3.11.9
-      - pandas==2.3.2
+      - pandas==2.2.2
       - petlx==1.0.3
       - protopunica==0.14.8.post2
       - pyfaidx==0.9.0.4
